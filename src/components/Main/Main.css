@@ -1,0 +1,15 @@
+.app-main {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 32px 15%;
+}
+
+.app-main .exercices-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
