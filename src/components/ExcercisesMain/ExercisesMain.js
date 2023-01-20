@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import './Main.css';
+import './ExercisesMain.css';
 import { getExercises } from '../../services/getExercises';
 
 import ExercisesResults from '../ExercisesResults/ExercisesResults';
 import FilterForm from '../FilterForm/FilterForm';
 
-export default function Main() {
+export default function ExercisesMain() {
   const [bodyPart, setBodyPart] = useState('');
   const [target, setTarget] = useState('');
   const [equipment, setEquipment] = useState('');

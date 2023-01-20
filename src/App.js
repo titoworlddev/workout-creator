@@ -1,12 +1,22 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import { Route } from 'wouter';
+
+import ExercisesPage from './pages/ExercisesPage/ExercisesPage';
+import CreatorPage from './pages/CreatorPage/CreatorPage';
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
+      <Route path="/">
+        <HomePage />
+      </Route>
+      <Route path="/exercises">
+        <ExercisesPage />
+      </Route>
+      <Route path="/creator">
+        <CreatorPage />
+      </Route>
     </>
   );
 }
