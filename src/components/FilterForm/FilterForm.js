@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './FilterForm.css';
 
 import { PARTS, TARGETS, EQUIPMENTS } from '../../services/getExercises';
@@ -10,6 +10,12 @@ export default function FilterForm({
   setTarget = () => {},
   setEquipment = () => {}
 }) {
+  useEffect(() => {
+    const form = document.querySelector('#filter-form');
+
+    form.querySelector('#bodypart-filter').value = 'back';
+  }, []);
+
   function filterExercises() {
     const form = document.querySelector('#filter-form');
 
@@ -21,23 +27,18 @@ export default function FilterForm({
   function resetFilters() {
     const form = document.querySelector('#filter-form');
 
-    form.querySelector('#bodypart-filter').value = '- Select -';
+    form.querySelector('#bodypart-filter').value = 'back';
     form.querySelector('#target-filter').value = '- Select -';
     form.querySelector('#equipment-filter').value = '- Select -';
 
-    setBodyPart('');
+    setBodyPart('back');
     setTarget('');
     setEquipment('');
   }
 
   return (
     <form id="filter-form">
-      <FilterLabel
-        name="Body part"
-        array={PARTS}
-        id="bodypart-filter"
-        selected={1}
-      />
+      <FilterLabel name="Body part" array={PARTS} id="bodypart-filter" />
       <FilterLabel name="Target" array={TARGETS} id="target-filter" />
       <FilterLabel name="Equipment" array={EQUIPMENTS} id="equipment-filter" />
 
