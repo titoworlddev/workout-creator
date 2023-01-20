@@ -1,4 +1,5 @@
 import React from 'react';
+import './FilterForm.css';
 
 import { PARTS, TARGETS, EQUIPMENTS } from '../../services/getExercises';
 
@@ -28,11 +29,8 @@ export default function FilterForm({ setBodyPart, setTarget, setEquipment }) {
   return (
     <form id="filter-form">
       <FilterLabel name="Body part" array={PARTS} id="bodypart-filter" />
-      <br />
       <FilterLabel name="Target" array={TARGETS} id="target-filter" />
-      <br />
       <FilterLabel name="Equipment" array={EQUIPMENTS} id="equipment-filter" />
-      <br />
 
       <div className="form-buttons">
         <div className="form-submit" id="form-submit" onClick={resetFilters}>
