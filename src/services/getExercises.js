@@ -1,4 +1,4 @@
-import exercises from '../../assets/json/api.json';
+import exercises from '../assets/json/api.json';
 
 export const PARTS = [
   '- Select -',
