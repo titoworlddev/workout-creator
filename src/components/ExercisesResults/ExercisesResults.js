@@ -14,9 +14,9 @@ export default function ExercisesResults({ exercises }) {
           <hr />
           <p>Body part: {exercise.bodyPart.capitalize()}</p>
           <hr />
-          <p>Equipment: {exercise.equipment.capitalize()}</p>
-          <hr />
           <p>Target: {exercise.target.capitalize()}</p>
+          <hr />
+          <p>Equipment: {exercise.equipment.capitalize()}</p>
         </div>
       ))}
     </section>
