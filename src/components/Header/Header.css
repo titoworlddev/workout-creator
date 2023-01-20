@@ -24,3 +24,7 @@
     display: none;
   }
 }
+
+.app-header h1 {
+  cursor: pointer;
+}

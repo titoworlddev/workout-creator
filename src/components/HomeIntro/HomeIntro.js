@@ -15,9 +15,11 @@ export default function HomeIntro() {
         own exercises with the <strong>Workout Creator.</strong>
       </p>
       <br />
-      <button className="app-button-primary app-button-primary-big">
-        <Link href="/creator">Start creating</Link>
-      </button>
+      <Link href="/creator">
+        <button className="app-button-primary app-button-primary-big">
+          Start creating
+        </button>
+      </Link>
     </>
   );
 }

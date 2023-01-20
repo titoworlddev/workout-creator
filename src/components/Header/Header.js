@@ -9,15 +9,19 @@ const MENU_OPTIONS = ['exercises', 'creator'];
 export default function Header() {
   return (
     <header className="app-header">
-      <h1>Workout Creator</h1>
+      <Link href="/">
+        <h1>Workout Creator</h1>
+      </Link>
       <ul>
-        <li className="app-button-primary">
-          <Link href="/">Home</Link>
-        </li>
+        <Link href="/">
+          <li className="app-button-primary">Home</li>
+        </Link>
         {MENU_OPTIONS.map(option => (
-          <li className="app-button-primary" key={option}>
-            <Link href={`${option}`}>{option.capitalize()}</Link>
-          </li>
+          <Link href={`${option}`}>
+            <li className="app-button-primary" key={option}>
+              {option.capitalize()}
+            </li>
+          </Link>
         ))}
       </ul>
     </header>
