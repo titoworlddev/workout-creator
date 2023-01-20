@@ -1,7 +1,8 @@
 import React from 'react';
 import './Header.css';
+import { stringCapitalize } from '../../utils/extensions/stringCapitalize';
 
-const MENU_OPTIONS = ['Home', 'About', 'Contact', 'Login'];
+const MENU_OPTIONS = ['home', 'exercises', 'creator'];
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
       <ul>
         {MENU_OPTIONS.map(option => (
           <li key={option}>
-            <a href={`#${option}`}>{option}</a>
+            <a href={`${option}`}>{stringCapitalize(option)}</a>
           </li>
         ))}
       </ul>
