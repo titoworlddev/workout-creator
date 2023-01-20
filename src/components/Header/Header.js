@@ -13,14 +13,12 @@ export default function Header() {
         <h1>Workout Creator</h1>
       </Link>
       <ul>
-        <Link href="/">
+        <Link href="/" key="/">
           <li className="app-button-primary">Home</li>
         </Link>
         {MENU_OPTIONS.map(option => (
-          <Link href={`${option}`}>
-            <li className="app-button-primary" key={option}>
-              {option.capitalize()}
-            </li>
+          <Link href={`${option}`} key={option}>
+            <li className="app-button-primary">{option.capitalize()}</li>
           </Link>
         ))}
       </ul>
