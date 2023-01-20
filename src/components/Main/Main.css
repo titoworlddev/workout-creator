@@ -12,6 +12,29 @@
   gap: 16px;
 }
 
+.app-main .exercises-container .exercise-card {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: #000;
+  font-weight: bold;
+
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
 .app-main .exercises-container .exercise-card img {
   width: 100%;
+
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
