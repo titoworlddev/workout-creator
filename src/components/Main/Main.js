@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Main.css';
-import { getExercises } from '../../services/getExercises';
+import {
+  getExercises,
+  getExercisesByBodyPart,
+  getExercisesByTarget
+} from '../../services/getExercises/getExercises';
 
 export default function Main() {
   const [exercises, setExercises] = useState([]);
 
   useEffect(() => {
-    if (exercises.length === 0)
-      getExercises('/target/biceps').then(data => setExercises(data));
+    if (exercises.length === 0) setExercises(getExercisesByTarget('biceps'));
   }, [exercises]);
 
   return (
