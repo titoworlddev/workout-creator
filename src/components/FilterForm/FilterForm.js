@@ -51,6 +51,8 @@ export default function FilterForm({
           Filter
         </div>
       </div>
+
+      <h3 className="exercises-number">Showing 1342 exercises</h3>
     </form>
   );
 }

@@ -20,7 +20,12 @@ export default function ExercisesMain() {
         equipment: equipment
       })
     );
-  }, [bodyPart, equipment, target]);
+
+    const exercisesNumber = document.querySelector('.exercises-number');
+    if (exercises.length === 0)
+      exercisesNumber.textContent = 'No exercises found !';
+    else exercisesNumber.textContent = `Showing ${exercises.length} exercises`;
+  }, [bodyPart, equipment, exercises.length, target]);
 
   return (
     <main className="exercises-main">
