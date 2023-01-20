@@ -40,6 +40,11 @@
   flex-wrap: wrap;
   gap: 8px;
 }
+.bodypart-label p,
+.target-label p,
+.equipment-label p {
+  font-weight: bold;
+}
 
 .bodypart-filter,
 .target-filter,

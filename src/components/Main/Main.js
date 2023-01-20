@@ -49,7 +49,7 @@ export default function Main() {
     <main className="app-main">
       <form id="filter-form">
         <label className="bodypart-label">
-          Body part:
+          <p>Body part:</p>
           <select
             className="bodypart-filter"
             id="bodypart-filter"
@@ -65,7 +65,7 @@ export default function Main() {
         <br />
 
         <label className="target-label">
-          Target:
+          <p>Target:</p>
           <select
             className="target-filter"
             id="target-filter"
@@ -81,7 +81,7 @@ export default function Main() {
         <br />
 
         <label className="equipment-label">
-          Equipment:
+          <p>Equipment:</p>
           <select
             className="equipment-filter"
             id="equipment-filter"
