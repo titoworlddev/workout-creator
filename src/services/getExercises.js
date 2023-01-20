@@ -77,19 +77,19 @@ export const getExercises = ({
 } = {}) => {
   return exercises['exercises']
     .filter(exercise => {
-      if (PARTS.slice(1).includes(bodyPart) && bodyPart !== '') {
+      if (PARTS.slice(1).includes(bodyPart)) {
         return exercise.bodyPart === bodyPart;
       }
       return exercise;
     })
     .filter(exercise => {
-      if (TARGETS.slice(1).includes(target) && target !== '') {
+      if (TARGETS.slice(1).includes(target)) {
         return exercise.target === target;
       }
       return exercise;
     })
     .filter(exercise => {
-      if (EQUIPMENTS.slice(1).includes(equipment) && equipment !== '') {
+      if (EQUIPMENTS.slice(1).includes(equipment)) {
         return exercise.equipment === equipment;
       }
       return exercise;
