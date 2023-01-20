@@ -40,14 +40,33 @@
 }
 
 .form-submit {
-  margin: 16px 0;
   background-color: #fff;
   color: #000;
   font-weight: bold;
   border: none;
-  padding: 8px 16px;
+  padding: 4px 8px;
   text-align: center;
   cursor: pointer;
+
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.bodypart-label,
+.target-label,
+.equipment-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bodypart-filter,
+.target-filter,
+.equipment-filter {
+  padding: 4px 8px;
 
   border-radius: 5px;
   -webkit-border-radius: 5px;
