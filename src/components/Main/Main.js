@@ -36,9 +36,12 @@ export default function Main() {
   return (
     <main className="app-main">
       <form id="filter-form">
-        <label>
-          Body part:{' '}
-          <select id="bodypart-filter" form="filter-form">
+        <label className="bodypart-label">
+          Body part:
+          <select
+            className="bodypart-filter"
+            id="bodypart-filter"
+            form="filter-form">
             {PARTS.map((elem, index) => (
               <option key={index} value={elem}>
                 {stringCapitalize(elem)}
@@ -49,9 +52,12 @@ export default function Main() {
 
         <br />
 
-        <label>
-          Target:{' '}
-          <select id="target-filter" form="filter-form">
+        <label className="target-label">
+          Target:
+          <select
+            className="target-filter"
+            id="target-filter"
+            form="filter-form">
             {TARGETS.map((elem, index) => (
               <option key={index} value={elem}>
                 {stringCapitalize(elem)}
@@ -62,9 +68,12 @@ export default function Main() {
 
         <br />
 
-        <label>
-          Equipment:{' '}
-          <select id="equipment-filter" form="filter-form">
+        <label className="equipment-label">
+          Equipment:
+          <select
+            className="equipment-filter"
+            id="equipment-filter"
+            form="filter-form">
             {EQUIPMENTS.map((elem, index) => (
               <option key={index} value={elem}>
                 {stringCapitalize(elem)}
