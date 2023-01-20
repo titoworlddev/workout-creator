@@ -32,7 +32,12 @@ export default function FilterForm({
 
   return (
     <form id="filter-form">
-      <FilterLabel name="Body part" array={PARTS} id="bodypart-filter" />
+      <FilterLabel
+        name="Body part"
+        array={PARTS}
+        id="bodypart-filter"
+        selected={1}
+      />
       <FilterLabel name="Target" array={TARGETS} id="target-filter" />
       <FilterLabel name="Equipment" array={EQUIPMENTS} id="equipment-filter" />
 

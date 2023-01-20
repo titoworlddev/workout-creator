@@ -7,7 +7,7 @@ import ExercisesResults from '../ExercisesResults/ExercisesResults';
 import FilterForm from '../FilterForm/FilterForm';
 
 export default function ExercisesMain() {
-  const [bodyPart, setBodyPart] = useState('');
+  const [bodyPart, setBodyPart] = useState('back');
   const [target, setTarget] = useState('');
   const [equipment, setEquipment] = useState('');
   const [exercises, setExercises] = useState([]);
