@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import { stringCapitalize } from '../../utils/extensions/stringCapitalize';
+import '../../utils/extensions/stringCapitalize';
 
 const MENU_OPTIONS = ['home', 'exercises', 'creator'];
 
@@ -11,7 +11,7 @@ export default function Header() {
       <ul>
         {MENU_OPTIONS.map(option => (
           <li key={option}>
-            <a href={`${option}`}>{stringCapitalize(option)}</a>
+            <a href={`${option}`}>{option.capitalize()}</a>
           </li>
         ))}
       </ul>

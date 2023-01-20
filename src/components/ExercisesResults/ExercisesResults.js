@@ -1,5 +1,4 @@
 import React from 'react';
-import { stringCapitalize } from '../../utils/extensions/stringCapitalize';
 import './ExercisesResults.css';
 
 export default function ExercisesResults({ exercises }) {
@@ -9,15 +8,15 @@ export default function ExercisesResults({ exercises }) {
         <div key={index} className="exercise-card">
           <img
             src={exercise.gifUrl}
-            alt={`${stringCapitalize(exercise.name)} gif`}
+            alt={`${exercise.name.capitalize()} gif`}
           />
-          <p>Name: {stringCapitalize(exercise.name)}</p>
+          <p>Name: {exercise.name.capitalize()}</p>
           <hr />
-          <p>Body part: {stringCapitalize(exercise.bodyPart)}</p>
+          <p>Body part: {exercise.bodyPart.capitalize()}</p>
           <hr />
-          <p>Equipment: {stringCapitalize(exercise.equipment)}</p>
+          <p>Equipment: {exercise.equipment.capitalize()}</p>
           <hr />
-          <p>Target: {stringCapitalize(exercise.target)}</p>
+          <p>Target: {exercise.target.capitalize()}</p>
         </div>
       ))}
     </section>
