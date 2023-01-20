@@ -36,12 +36,18 @@ export default function FilterForm({
       <FilterLabel name="Target" array={TARGETS} id="target-filter" />
       <FilterLabel name="Equipment" array={EQUIPMENTS} id="equipment-filter" />
 
-      <div className="form-buttons">
-        <div className="form-submit" id="form-submit" onClick={resetFilters}>
+      <div className="form-buttons-container">
+        <div
+          className="form-submit app-button-primary"
+          id="form-submit"
+          onClick={resetFilters}>
           🔄️
         </div>
 
-        <div className="form-submit" id="form-submit" onClick={filterExercises}>
+        <div
+          className="form-submit app-button-primary"
+          id="form-submit"
+          onClick={filterExercises}>
           Filter
         </div>
       </div>

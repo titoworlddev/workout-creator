@@ -10,10 +10,11 @@ main {
   background-color: #fff;
   border: none;
   color: #000;
+  font-size: 1.05rem;
   font-weight: bold;
   cursor: pointer;
   margin: 0.5rem 0;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 2rem;
   text-decoration: none;
 
   border-radius: var(--border-radius);
@@ -31,8 +32,8 @@ main {
   background-color: #ffffffe8;
 }
 .app-button-primary-big {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin: 1rem 0;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   text-transform: uppercase;
 }

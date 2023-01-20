@@ -23,7 +23,7 @@ export default function ExercisesMain() {
   }, [bodyPart, equipment, target]);
 
   return (
-    <main className="app-main">
+    <main className="exercises-main">
       <FilterForm
         setBodyPart={setBodyPart}
         setTarget={setTarget}

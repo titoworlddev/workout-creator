@@ -1,24 +1,7 @@
-.form-buttons {
+.form-buttons-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 16px 32px;
+  gap: 1rem 2rem;
   flex-wrap: wrap;
-}
-
-.form-submit {
-  background-color: #fff;
-  color: #000;
-  font-weight: bold;
-  border: none;
-  padding: 4px 32px;
-  text-align: center;
-  cursor: pointer;
-
-  border-radius: var(--border-radius);
-  -webkit-border-radius: var(--border-radius);
-  -moz-border-radius: var(--border-radius);
-  -ms-border-radius: var(--border-radius);
-  -o-border-radius: var(--border-radius);
-  -webkit-border-radius: var(--border-radius);
 }

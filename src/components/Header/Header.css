@@ -1,6 +1,6 @@
 .app-header {
   background-color: var(--primary-color);
-  padding: 16px 15%;
+  padding: 1rem 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 48px;
+  gap: 3rem;
 }
 
 @media screen and (max-width: 1000px) {

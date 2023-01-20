@@ -3,7 +3,8 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .filter-label p {
@@ -11,7 +12,9 @@
 }
 
 .filter-label select {
-  padding: 4px 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
 
   border-radius: var(--border-radius);
   -webkit-border-radius: var(--border-radius);
