@@ -1,39 +1,88 @@
 import React, { useState, useEffect } from 'react';
 import './Main.css';
-import { getExercises } from '../../services/getExercises/getExercises';
+import {
+  getExercises,
+  PARTS,
+  TARGETS,
+  EQUIPMENTS
+} from '../../services/getExercises/getExercises';
+import ExercisesResults from '../ExercisesResults/ExercisesResults';
 import { stringCapitalize } from '../../utils/extensions/stringCapitalize';
 
 export default function Main() {
+  const [bodyPart, setBodyPart] = useState('');
+  const [target, setTarget] = useState('');
+  const [equipment, setEquipment] = useState('');
   const [exercises, setExercises] = useState([]);
 
   useEffect(() => {
-    if (exercises.length === 0)
-      setExercises(
-        getExercises({
-          //  selector: '',
-          // bodyPart: 'chest',
-          target: 'pectorals',
-          equipment: 'barbell'
-        })
-      );
-  }, [exercises]);
+    setExercises(
+      getExercises({
+        bodyPart: bodyPart,
+        target: target,
+        equipment: equipment
+      })
+    );
+  }, [bodyPart, equipment, target]);
+
+  function filterExercises() {
+    const form = document.querySelector('#filter-form');
+
+    setBodyPart(form.querySelector('#bodypart-filter').value);
+    setTarget(form.querySelector('#target-filter').value);
+    setEquipment(form.querySelector('#equipment-filter').value);
+  }
 
   return (
     <main className="app-main">
-      <section className="exercises-container">
-        {exercises.map((exercise, index) => (
-          <div key={index} className="exercise-card">
-            <img
-              src={exercise.gifUrl}
-              alt={`${stringCapitalize(exercise.name)} gif`}
-            />
-            <p>Name: {stringCapitalize(exercise.name)}</p>
-            <p>Body part: {stringCapitalize(exercise.bodyPart)}</p>
-            <p>Equipment: {stringCapitalize(exercise.equipment)}</p>
-            <p>Target: {stringCapitalize(exercise.target)}</p>
-          </div>
-        ))}
-      </section>
+      <form id="filter-form">
+        <label>
+          Body part:{' '}
+          <select id="bodypart-filter" form="filter-form">
+            {PARTS.map((elem, index) => (
+              <option key={index} value={elem}>
+                {stringCapitalize(elem)}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <br />
+
+        <label>
+          Target:{' '}
+          <select id="target-filter" form="filter-form">
+            {TARGETS.map((elem, index) => (
+              <option key={index} value={elem}>
+                {stringCapitalize(elem)}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <br />
+
+        <label>
+          Equipment:{' '}
+          <select id="equipment-filter" form="filter-form">
+            {EQUIPMENTS.map((elem, index) => (
+              <option key={index} value={elem}>
+                {stringCapitalize(elem)}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <br />
+
+        <div className="form-submit" id="form-submit" onClick={filterExercises}>
+          Filter
+        </div>
+      </form>
+
+      <br />
+
+      <ExercisesResults exercises={exercises} />
     </main>
   );
 }

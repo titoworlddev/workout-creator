@@ -1,6 +1,7 @@
 import exercises from '../../assets/json/api.json';
 
-const PARTS = [
+export const PARTS = [
+  '',
   'back',
   'cardio',
   'chest',
@@ -13,7 +14,8 @@ const PARTS = [
   'waist'
 ];
 
-const TARGETS = [
+export const TARGETS = [
+  '',
   'abductors',
   'abs',
   'adductors',
@@ -35,7 +37,8 @@ const TARGETS = [
   'upper back'
 ];
 
-const EQUIPMENTS = [
+export const EQUIPMENTS = [
+  '',
   'assisted',
   'band',
   'barbell',
@@ -74,19 +77,19 @@ export const getExercises = ({
 } = {}) => {
   return exercises['exercises']
     .filter(exercise => {
-      if (PARTS.includes(bodyPart)) {
+      if (PARTS.includes(bodyPart) && bodyPart !== '') {
         return exercise.bodyPart === bodyPart;
       }
       return exercise;
     })
     .filter(exercise => {
-      if (TARGETS.includes(target)) {
+      if (TARGETS.includes(target) && target !== '') {
         return exercise.target === target;
       }
       return exercise;
     })
     .filter(exercise => {
-      if (EQUIPMENTS.includes(equipment)) {
+      if (EQUIPMENTS.includes(equipment) && equipment !== '') {
         return exercise.equipment === equipment;
       }
       return exercise;
