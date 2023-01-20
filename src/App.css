@@ -5,3 +5,34 @@ main {
   min-height: 100vh;
   padding: 12vh 15%;
 }
+
+.app-button-primary {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
+.app-button-primary a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.app-button-primary:hover {
+  background-color: #ffffffe8;
+}
+.app-button-primary-big {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}

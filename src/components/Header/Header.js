@@ -11,11 +11,11 @@ export default function Header() {
     <header className="app-header">
       <h1>Workout Creator</h1>
       <ul>
-        <li>
+        <li className="app-button-primary">
           <Link href="/">Home</Link>
         </li>
         {MENU_OPTIONS.map(option => (
-          <li key={option}>
+          <li className="app-button-primary" key={option}>
             <Link href={`${option}`}>{option.capitalize()}</Link>
           </li>
         ))}
