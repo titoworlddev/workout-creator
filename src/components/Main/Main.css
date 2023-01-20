@@ -16,27 +16,37 @@
   display: flex;
   flex-direction: column;
   gap: 9px;
-
   padding: 16px;
   background-color: var(--primary-color);
   color: #000;
   font-weight: bold;
 
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
 }
 
 .app-main .exercises-container .exercise-card img {
   width: 100%;
+  background-color: #fff;
 
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px 32px;
+  flex-wrap: wrap;
 }
 
 .form-submit {
@@ -44,15 +54,16 @@
   color: #000;
   font-weight: bold;
   border: none;
-  padding: 4px 8px;
+  padding: 4px 32px;
   text-align: center;
   cursor: pointer;
 
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
 }
 
 .bodypart-label,
@@ -61,6 +72,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .bodypart-filter,
@@ -68,9 +81,10 @@
 .equipment-filter {
   padding: 4px 8px;
 
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
 }

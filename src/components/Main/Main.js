@@ -33,6 +33,18 @@ export default function Main() {
     setEquipment(form.querySelector('#equipment-filter').value);
   }
 
+  function resetFilters() {
+    const form = document.querySelector('#filter-form');
+
+    form.querySelector('#bodypart-filter').value = '- Select -';
+    form.querySelector('#target-filter').value = '- Select -';
+    form.querySelector('#equipment-filter').value = '- Select -';
+
+    setBodyPart('');
+    setTarget('');
+    setEquipment('');
+  }
+
   return (
     <main className="app-main">
       <form id="filter-form">
@@ -84,8 +96,17 @@ export default function Main() {
 
         <br />
 
-        <div className="form-submit" id="form-submit" onClick={filterExercises}>
-          Filter
+        <div className="form-buttons">
+          <div className="form-submit" id="form-submit" onClick={resetFilters}>
+            🔄️
+          </div>
+
+          <div
+            className="form-submit"
+            id="form-submit"
+            onClick={filterExercises}>
+            Filter
+          </div>
         </div>
       </form>
 
