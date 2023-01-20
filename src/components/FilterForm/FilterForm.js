@@ -5,7 +5,11 @@ import { PARTS, TARGETS, EQUIPMENTS } from '../../services/getExercises';
 
 import FilterLabel from '../FilterLabel/FilterLabel';
 
-export default function FilterForm({ setBodyPart, setTarget, setEquipment }) {
+export default function FilterForm({
+  setBodyPart = () => {},
+  setTarget = () => {},
+  setEquipment = () => {}
+}) {
   function filterExercises() {
     const form = document.querySelector('#filter-form');
 
