@@ -23,3 +23,7 @@
   -o-border-radius: var(--border-radius);
   -webkit-border-radius: var(--border-radius);
 }
+
+.filter-label select option {
+  font-weight: 600;
+}
