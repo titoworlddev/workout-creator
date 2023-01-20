@@ -9,7 +9,7 @@ export default function Header() {
       <h1>Workout App</h1>
       <ul>
         {MENU_OPTIONS.map(option => (
-          <li>
+          <li key={option}>
             <a href={`#${option}`}>{option}</a>
           </li>
         ))}
