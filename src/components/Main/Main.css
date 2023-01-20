@@ -2,8 +2,8 @@
   align-items: center;
   background-color: #000;
   color: #fff;
-  min-height: 80vh;
-  padding: 32px 15%;
+  min-height: 100vh;
+  padding: 12vh 15%;
 }
 
 .app-main .exercises-container {
