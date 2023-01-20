@@ -7,7 +7,7 @@ const MENU_OPTIONS = ['home', 'exercises', 'creator'];
 export default function Header() {
   return (
     <header className="app-header">
-      <h1>Workout App</h1>
+      <h1>Workout Creator</h1>
       <ul>
         {MENU_OPTIONS.map(option => (
           <li key={option}>
