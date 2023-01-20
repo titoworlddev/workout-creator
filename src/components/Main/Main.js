@@ -5,7 +5,7 @@ import {
   PARTS,
   TARGETS,
   EQUIPMENTS
-} from '../../services/getExercises/getExercises';
+} from '../../services/getExercises';
 import ExercisesResults from '../ExercisesResults/ExercisesResults';
 import { stringCapitalize } from '../../utils/extensions/stringCapitalize';
 
