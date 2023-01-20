@@ -2,14 +2,11 @@ export const getExercises = async (path = '') => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '0c41a301a7mshbd8ace165090d9ap12b1a5jsn2b2fef17b576',
+      'X-RapidAPI-Key': '1debb555b1msh36ba7d5d0a36329p1d231cjsnf77391a40b35',
       'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     }
   };
+  const API_URL = `https://exercisedb.p.rapidapi.com/exercises${path}`;
 
-  const API_URL = 'https://exercisedb.p.rapidapi.com/exercises';
-
-  return await fetch(API_URL, options)
-    .then(response => response.json())
-    .catch(err => console.error(err));
+  return await fetch(API_URL, options).then(res => res.json());
 };
