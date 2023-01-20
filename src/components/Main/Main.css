@@ -31,21 +31,6 @@
   -webkit-border-radius: var(--border-radius);
 }
 
-.bodypart-label,
-.target-label,
-.equipment-label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.bodypart-label p,
-.target-label p,
-.equipment-label p {
-  font-weight: bold;
-}
-
 .bodypart-filter,
 .target-filter,
 .equipment-filter {
