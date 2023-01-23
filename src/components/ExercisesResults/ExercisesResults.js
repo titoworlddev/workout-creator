@@ -1,5 +1,5 @@
 import React from 'react';
-import './ExercisesResults.css';
+import './styles.css';
 
 export default function ExercisesResults({ exercises }) {
   return (

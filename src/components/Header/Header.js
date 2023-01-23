@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css';
+import './styles.css';
 import { Link } from 'wouter';
 
 import '../../utils/extensions/stringCapitalize';
