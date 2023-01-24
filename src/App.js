@@ -8,15 +8,9 @@ import HomePage from './pages/HomePage/HomePage';
 function App() {
   return (
     <>
-      <Route path="/">
-        <HomePage />
-      </Route>
-      <Route path="/exercises">
-        <ExercisesPage />
-      </Route>
-      <Route path="/creator">
-        <CreatorPage />
-      </Route>
+      <Route path="/" component={HomePage} />
+      <Route path="/exercises" component={ExercisesPage} />
+      <Route path="/creator" component={CreatorPage} />
     </>
   );
 }
