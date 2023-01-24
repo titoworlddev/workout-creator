@@ -44,14 +44,14 @@ export default function FilterForm({
 
       <div className="form-buttons-container">
         <div
-          className="form-submit app-button-primary"
+          className="form-submit app-btn-primary"
           id="form-submit"
           onClick={resetFilters}>
           🔄️
         </div>
 
         <div
-          className="form-submit app-button-primary"
+          className="form-submit app-btn-primary"
           id="form-submit"
           onClick={filterExercises}>
           Filter

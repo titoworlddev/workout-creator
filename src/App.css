@@ -6,7 +6,7 @@ main {
   padding: 12vh 15%;
 }
 
-.app-button-primary {
+.app-btn-primary {
   background-color: #fff;
   border: none;
   color: #000;
@@ -23,15 +23,15 @@ main {
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
 }
-.app-button-primary a {
+.app-btn-primary a {
   color: #000;
   text-decoration: none;
   font-weight: bold;
 }
-.app-button-primary:hover {
+.app-btn-primary:hover {
   background-color: #ffffffe8;
 }
-.app-button-primary-big {
+.app-btn-primary-big {
   font-size: 1.15rem;
   margin: 1rem 0;
   padding: 1rem 2.5rem;

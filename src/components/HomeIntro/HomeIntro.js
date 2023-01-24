@@ -16,7 +16,7 @@ export default function HomeIntro() {
       </p>
       <br />
       <Link href="/creator">
-        <button className="app-button-primary app-button-primary-big">
+        <button className="app-btn-primary app-btn-primary-big">
           Start creating
         </button>
       </Link>

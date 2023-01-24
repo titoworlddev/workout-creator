@@ -14,11 +14,11 @@ export default function Header() {
       </Link>
       <ul>
         <Link href="/" key="/">
-          <li className="app-button-primary">Home</li>
+          <li className="app-btn-primary">Home</li>
         </Link>
         {MENU_OPTIONS.map(option => (
           <Link href={`${option}`} key={option}>
-            <li className="app-button-primary">{option.capitalize()}</li>
+            <li className="app-btn-primary">{option.capitalize()}</li>
           </Link>
         ))}
       </ul>

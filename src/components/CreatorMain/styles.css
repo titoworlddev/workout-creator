@@ -1,12 +1,14 @@
-.creator-main .title-button-creator {
+.creator-main .creator-title-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
 }
 
-.creator-main .day-title {
-  margin-bottom: 1rem;
+.creator-main .day-title-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .creator-main .day-exercises {
