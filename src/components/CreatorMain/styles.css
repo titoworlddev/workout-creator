@@ -1,12 +1,25 @@
 .creator-main .creator-title-btn {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
 }
 
-.creator-main .day-title-btn {
+.creator-main .btn-container {
   display: flex;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 1580px) {
+  .creator-main .btn-container {
+    width: 100%;
+  }
+}
+
+.creator-main .day-title-btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }

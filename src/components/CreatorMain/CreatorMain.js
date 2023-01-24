@@ -11,7 +11,9 @@ export default function CreatorMain() {
           Here, you can create your workout by adding days and adding exercises
           at this days.
         </h2>
-        <button className="button-creator app-btn-primary">Add day</button>
+        <div className="btn-container">
+          <button className="btn-creator app-btn-primary">Add day</button>
+        </div>
       </div>
 
       <section className="workout-days">
