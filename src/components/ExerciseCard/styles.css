@@ -1,0 +1,38 @@
+.exercise-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: #000;
+  font-weight: bold;
+
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+}
+
+.exercise-card .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.exercise-card hr {
+  border: 1px solid #000;
+}
+
+.exercise-card img {
+  background-color: #fff;
+  width: 100%;
+
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+}

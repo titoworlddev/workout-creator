@@ -1,0 +1,23 @@
+.creator-main .title-button-creator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.creator-main .day-title {
+  margin-bottom: 1rem;
+}
+
+.creator-main .day-exercises {
+  display: grid;
+  /* Pongo auto-fill, porque auto-fill lo que hace es rellenar si,
+  no caben en el row, pero si solo hay uno, mantiene el tamano que quiero 
+  como minimo.
+  En cambio auto-fit, si no hay suficientes elementos para rellenar una row,
+  lo que hace es agrandar los elementos para que rellenen toda la linea, 
+  ya sea un elemento o tres, lo cual si es solo un elemento queda muy mal,
+  porque si es por ejemplo una img rompe todo el diseno */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
