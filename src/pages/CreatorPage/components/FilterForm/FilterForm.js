@@ -16,7 +16,7 @@ export default function FilterForm({
     form.querySelector('#bodypart-filter').value = 'back';
   }, []);
 
-  function filterExercises() {
+  function onFilterExercises() {
     const form = document.querySelector('#filter-form');
 
     setBodyPart(form.querySelector('#bodypart-filter').value);
@@ -24,7 +24,7 @@ export default function FilterForm({
     setEquipment(form.querySelector('#equipment-filter').value);
   }
 
-  function resetFilters() {
+  function onResetFilters() {
     const form = document.querySelector('#filter-form');
 
     form.querySelector('#bodypart-filter').value = 'back';
@@ -46,14 +46,14 @@ export default function FilterForm({
         <div
           className="form-submit app-btn-primary"
           id="form-submit"
-          onClick={resetFilters}>
+          onClick={onResetFilters}>
           🔄️
         </div>
 
         <div
           className="form-submit app-btn-primary"
           id="form-submit"
-          onClick={filterExercises}>
+          onClick={onFilterExercises}>
           Filter
         </div>
       </div>
