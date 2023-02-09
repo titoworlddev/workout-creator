@@ -1,8 +1,9 @@
 import React from 'react';
 // import { Link } from 'wouter';
 import './HeaderMobileMenu.css';
+import { Link } from 'wouter';
 
-const MENU_OPTIONS = ['home', 'exercises', 'creator'];
+const MENU_OPTIONS = ['exercises', 'creator'];
 
 export default function HeaderMobileMenu() {
   return (
@@ -10,11 +11,14 @@ export default function HeaderMobileMenu() {
       <li className="mobile-menu-button app-btn-primary">
         Menu
         <ul className="mobile-menu-dropdown">
+          <Link href="/">
+            <li className="app-btn-primary">Home</li>
+          </Link>
           {MENU_OPTIONS.map((elem, index) => {
             return (
-              <li className="app-btn-primary" key={index}>
-                {elem.capitalize()}
-              </li>
+              <Link href={`${elem}`} key={index}>
+                <li className="app-btn-primary">{elem.capitalize()}</li>
+              </Link>
             );
           })}
         </ul>
