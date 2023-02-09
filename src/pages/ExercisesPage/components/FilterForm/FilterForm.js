@@ -12,26 +12,26 @@ export default function FilterForm({
 }) {
   useEffect(() => {
     const form = document.querySelector('#filter-form');
+    form.addEventListener('submit', e => e.preventDefault());
 
     form.querySelector('#bodypart-filter').value = 'back';
   }, []);
 
-  function handleFormSubmit() {
+  const handleFormSubmit = () => {
     const form = document.querySelector('#filter-form');
-    form.addEventListener('submit', e => e.preventDefault());
 
     setBodyPart(form.querySelector('#bodypart-filter').value);
     setTarget(form.querySelector('#target-filter').value);
     setEquipment(form.querySelector('#equipment-filter').value);
-  }
+  };
 
-  function handleResetFilters() {
+  const handleResetFilters = () => {
     const form = document.querySelector('#filter-form');
 
     form.querySelector('#bodypart-filter').value = 'back';
     form.querySelector('#target-filter').value = '- Select -';
     form.querySelector('#equipment-filter').value = '- Select -';
-  }
+  };
 
   return (
     <form id="filter-form" onSubmit={handleFormSubmit}>
