@@ -3,7 +3,7 @@ import './styles.css';
 
 import { PARTS, TARGETS, EQUIPMENTS } from '../../../../services/getExercises';
 
-import FilterLabel from '../../../../components/FilterLabel/FilterLabel';
+import FilterLabel from '../FilterLabel/FilterLabel';
 
 export default function FilterForm({
   setBodyPart = () => {},
