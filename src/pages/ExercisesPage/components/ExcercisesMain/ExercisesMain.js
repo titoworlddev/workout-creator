@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
 
-import { getExercises } from '../../services/getExercises';
+import { getExercises } from '../../../../services/getExercises';
 
 import ExercisesResults from '../ExercisesResults/ExercisesResults';
-import FilterForm from '../FilterForm/FilterForm';
+import FilterForm from '../../../CreatorPage/components/FilterForm/FilterForm';
 
 export default function ExercisesMain() {
   const [bodyPart, setBodyPart] = useState('back');

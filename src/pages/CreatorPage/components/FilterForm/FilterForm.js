@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import './styles.css';
 
-import { PARTS, TARGETS, EQUIPMENTS } from '../../services/getExercises';
+import { PARTS, TARGETS, EQUIPMENTS } from '../../../../services/getExercises';
 
-import FilterLabel from '../FilterLabel/FilterLabel';
+import FilterLabel from '../../../../components/FilterLabel/FilterLabel';
 
 export default function FilterForm({
   setBodyPart = () => {},
