@@ -33,6 +33,6 @@
   lo que hace es agrandar los elementos para que rellenen toda la linea, 
   ya sea un elemento o tres, lo cual si es solo un elemento queda muy mal,
   porque si es por ejemplo una img rompe todo el diseno */
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 1rem;
 }

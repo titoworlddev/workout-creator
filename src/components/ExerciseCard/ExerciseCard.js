@@ -6,19 +6,27 @@ export default function ExerciseCard({ exercise, series = 0, reps = 0 }) {
     <div className="exercise-card">
       <img src={exercise.gifUrl} alt={`${exercise.name.capitalize()} gif`} />
       <div className="card-info">
-        <p>Name: {exercise.name.capitalize()}</p>
+        <small>Name: {exercise.name.capitalize()}</small>
         <hr />
-        <p>Body part: {exercise.bodyPart.capitalize()}</p>
-        <hr />
-        <p>Target: {exercise.target.capitalize()}</p>
-        <hr />
-        <p>Equipment: {exercise.equipment.capitalize()}</p>
+        {!series && (
+          <>
+            <small>Body part: {exercise.bodyPart.capitalize()}</small>
+            <hr />
+          </>
+        )}
+        <small>Target: {exercise.target.capitalize()}</small>
+        {!series && (
+          <>
+            <hr />
+            <small>Equipment: {exercise.equipment.capitalize()}</small>
+          </>
+        )}
         {series > 0 ? (
           <>
             <hr />
-            <p>Series: {series}</p>
+            <small>Series: {series}</small>
             <hr />
-            <p>Reps: {reps}</p>
+            <small>Reps: {reps}</small>
           </>
         ) : null}
       </div>
