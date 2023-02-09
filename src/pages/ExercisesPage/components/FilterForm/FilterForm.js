@@ -22,7 +22,7 @@ export default function FilterForm({
       .addEventListener('submit', e => e.preventDefault());
   }
 
-  function onFilterExercises() {
+  function handleFilterExercises() {
     preventFormSubmit();
     const form = document.querySelector('#filter-form');
 
@@ -31,7 +31,7 @@ export default function FilterForm({
     setEquipment(form.querySelector('#equipment-filter').value);
   }
 
-  function onResetFilters() {
+  function handleResetFilters() {
     preventFormSubmit();
     const form = document.querySelector('#filter-form');
 
@@ -54,14 +54,14 @@ export default function FilterForm({
         <button
           className="form-submit app-btn-primary"
           id="form-submit"
-          onClick={onResetFilters}>
+          onClick={handleResetFilters}>
           🔄️
         </button>
 
         <button
           className="form-submit app-btn-primary"
           id="form-submit"
-          onClick={onFilterExercises}>
+          onClick={handleFilterExercises}>
           Filter
         </button>
       </div>
