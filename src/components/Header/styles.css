@@ -10,18 +10,14 @@
   width: 100%;
   max-height: 10vh;
 }
-
-.app-header ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
+@media screen and (max-width: 1024px) {
+  .app-header {
+    padding: 1rem 10%;
+  }
 }
-
-@media screen and (max-width: 1030px) {
-  .app-header ul {
-    display: none;
+@media screen and (max-width: 768px) {
+  .app-header {
+    padding: 1rem 32px;
   }
 }
 

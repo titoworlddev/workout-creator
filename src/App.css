@@ -5,6 +5,16 @@ main {
   min-height: 100vh;
   padding: 12vh 15%;
 }
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 12vh 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: 12vh 32px;
+  }
+}
 
 .app-btn-primary {
   background-color: #fff;
@@ -15,6 +25,7 @@ main {
   margin: 0.5rem 0;
   padding: 0.5rem 2rem;
   text-decoration: none;
+  text-align: center;
 
   border-radius: var(--border-radius);
   -webkit-border-radius: var(--border-radius);

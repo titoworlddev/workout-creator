@@ -1,0 +1,32 @@
+.mobile-menu li ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  margin: 8px 0 0 -52px;
+  padding: 0 8px;
+
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
+
+.mobile-menu li:hover > ul {
+  display: block;
+}
+
+/* .mobile-menu .mobile-menu-dropdown li {
+  padding: 8px 16px;
+
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+} */
+
+.mobile-menu .mobile-menu-dropdown li:hover {
+  background-color: #000;
+  color: #fff;
+}

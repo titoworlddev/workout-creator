@@ -3,14 +3,14 @@ import './styles.css';
 import { Link } from 'wouter';
 
 import '../../utils/extensions/stringCapitalize';
-
-const MENU_OPTIONS = ['exercises', 'creator'];
+import HeaderDesktopMenu from '../HeaderDesktopMenu/HeaderDesktopMenu';
+import HeaderMobileMenu from '../HeaderMobileMenu/HeaderMobileMenu';
 
 export default function Header() {
   const [headerTitle, setHeaderTitle] = useState('Workout Creator');
 
   const setTitleText = () => {
-    window.innerWidth > 1030
+    window.innerWidth > 1024
       ? setHeaderTitle('Workout Creator')
       : setHeaderTitle('WC');
   };
@@ -27,16 +27,7 @@ export default function Header() {
       <Link href="/">
         <h1>{headerTitle}</h1>
       </Link>
-      <ul>
-        <Link href="/" key="/">
-          <li className="app-btn-primary">Home</li>
-        </Link>
-        {MENU_OPTIONS.map(option => (
-          <Link href={`${option}`} key={option}>
-            <li className="app-btn-primary">{option.capitalize()}</li>
-          </Link>
-        ))}
-      </ul>
+      {window.innerWidth > 1024 ? <HeaderDesktopMenu /> : <HeaderMobileMenu />}
     </header>
   );
 }

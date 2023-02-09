@@ -1,0 +1,13 @@
+.app-header .desktop-menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .app-header .desktop-menu {
+    display: none;
+  }
+}
