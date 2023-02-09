@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-import ExerciseCard from '../ExerciseCard/ExerciseCard';
+import ExerciseCard from '../../../../components/ExerciseCard/ExerciseCard';
 
 export default function CreatorMain() {
   return (

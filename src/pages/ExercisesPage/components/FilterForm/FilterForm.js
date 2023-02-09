@@ -16,7 +16,14 @@ export default function FilterForm({
     form.querySelector('#bodypart-filter').value = 'back';
   }, []);
 
+  function preventFormSubmit() {
+    document
+      .querySelector('#filter-form')
+      .addEventListener('submit', e => e.preventDefault());
+  }
+
   function onFilterExercises() {
+    preventFormSubmit();
     const form = document.querySelector('#filter-form');
 
     setBodyPart(form.querySelector('#bodypart-filter').value);
@@ -25,6 +32,7 @@ export default function FilterForm({
   }
 
   function onResetFilters() {
+    preventFormSubmit();
     const form = document.querySelector('#filter-form');
 
     form.querySelector('#bodypart-filter').value = 'back';
@@ -43,19 +51,19 @@ export default function FilterForm({
       <FilterLabel name="Equipment" array={EQUIPMENTS} id="equipment-filter" />
 
       <div className="form-buttons-container">
-        <div
+        <button
           className="form-submit app-btn-primary"
           id="form-submit"
           onClick={onResetFilters}>
           🔄️
-        </div>
+        </button>
 
-        <div
+        <button
           className="form-submit app-btn-primary"
           id="form-submit"
           onClick={onFilterExercises}>
           Filter
-        </div>
+        </button>
       </div>
 
       <h3 className="exercises-number">Showing 1342 exercises</h3>

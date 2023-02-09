@@ -4,7 +4,7 @@ import './styles.css';
 import { getExercises } from '../../../../services/getExercises';
 
 import ExercisesResults from '../ExercisesResults/ExercisesResults';
-import FilterForm from '../../../CreatorPage/components/FilterForm/FilterForm';
+import FilterForm from '../FilterForm/FilterForm';
 
 export default function ExercisesMain() {
   const [bodyPart, setBodyPart] = useState('back');
