@@ -1,4 +1,3 @@
-import React from 'react';
 // import { Link } from 'wouter';
 import './HeaderMobileMenu.css';
 import { Link } from 'wouter';
@@ -14,13 +13,11 @@ export default function HeaderMobileMenu() {
           <Link href="/">
             <li className="app-btn-primary">Home</li>
           </Link>
-          {MENU_OPTIONS.map((elem, index) => {
-            return (
-              <Link href={`${elem}`} key={index}>
-                <li className="app-btn-primary">{elem.capitalize()}</li>
-              </Link>
-            );
-          })}
+          {MENU_OPTIONS.map((elem, index) => (
+            <Link href={`${elem}`} key={index}>
+              <li className="app-btn-primary">{elem.capitalize()}</li>
+            </Link>
+          ))}
         </ul>
       </li>
     </ul>
