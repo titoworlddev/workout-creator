@@ -1,23 +1,32 @@
-.mobile-menu li ul {
-  display: none;
-  position: absolute;
-  background-color: var(--accent-color);
-  margin: 8px 0 0 -54px;
-  padding: 0 8px;
-
-  border-radius: var(--border-radius);
-  -webkit-border-radius: var(--border-radius);
-  -moz-border-radius: var(--border-radius);
-  -ms-border-radius: var(--border-radius);
-  -o-border-radius: var(--border-radius);
+.mobile-menu {
+  position: relative;
 }
 
-.mobile-menu .mobile-menu-button:hover {
+.mobile-menu .mobile-menu-btn:hover {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   -webkit-border-radius: var(--border-radius) var(--border-radius) 0 0;
   -moz-border-radius: var(--border-radius) var(--border-radius) 0 0;
   -ms-border-radius: var(--border-radius) var(--border-radius) 0 0;
   -o-border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.mobile-menu .mobile-menu-dropdown {
+  display: none;
+  position: absolute;
+  background-color: var(--accent-color);
+  top: 100%;
+  right: 0;
+  padding: 8px;
+  border-radius: var(--border-radius) 0 var(--border-radius)
+    var(--border-radius);
+  -webkit-border-radius: var(--border-radius) 0 var(--border-radius)
+    var(--border-radius);
+  -moz-border-radius: var(--border-radius) 0 var(--border-radius)
+    var(--border-radius);
+  -ms-border-radius: var(--border-radius) 0 var(--border-radius)
+    var(--border-radius);
+  -o-border-radius: var(--border-radius) 0 var(--border-radius)
+    var(--border-radius);
 }
 
 .mobile-menu li:hover > ul {
