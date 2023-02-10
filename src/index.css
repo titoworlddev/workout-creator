@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #5768ff;
-  --secondary-color: #000000;
-  --accent-color: #fff;
-  --accent-hover-color: #ffffffe8;
+  --primary-color: #5364f5;
+  --secondary-color: #0f0f0f;
+  --accent-color: #ececec;
+  --accent-hover-color: #ececece8;
   --border-radius: 1rem;
 }
 
