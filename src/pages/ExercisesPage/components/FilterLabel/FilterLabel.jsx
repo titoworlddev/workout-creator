@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './FilterLabel.css';
 
 export default function FilterLabel({ name = 'Filter', array = [], id = '' }) {
   return (

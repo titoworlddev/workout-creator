@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './ExerciseCard.css';
 
 export default function ExerciseCard({ exercise, series = 0, reps = 0 }) {
   return (

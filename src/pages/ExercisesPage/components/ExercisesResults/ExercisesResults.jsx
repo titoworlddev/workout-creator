@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './ExercisesResults.css';
 import ExerciseCard from '../../../../components/ExerciseCard/ExerciseCard';
 
 export default function ExercisesResults({ exercises }) {

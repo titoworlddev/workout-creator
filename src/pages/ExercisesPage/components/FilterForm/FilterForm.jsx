@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './styles.css';
+import './FilterForm.css';
 
 import { PARTS, TARGETS, EQUIPMENTS } from '../../../../services/getExercises';
 

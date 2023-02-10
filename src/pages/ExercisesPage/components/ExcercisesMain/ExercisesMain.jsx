@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './styles.css';
+import './ExercisesMain.css';
 
 import { getExercises } from '../../../../services/getExercises';
 
