@@ -1,4 +1,4 @@
-.creator-main .creator-title-btn {
+.creator-main .creator-title-btn-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -9,6 +9,7 @@
 .creator-main .btn-container {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 @media screen and (max-width: 1580px) {
   .creator-main .btn-container {
@@ -16,7 +17,7 @@
   }
 }
 
-.creator-main .day-title-btn {
+.creator-main .day-title-btn-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;

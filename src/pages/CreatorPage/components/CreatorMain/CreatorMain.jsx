@@ -6,7 +6,7 @@ import ExerciseCard from '../../../../components/ExerciseCard/ExerciseCard';
 export default function CreatorMain() {
   return (
     <main className="creator-main">
-      <div className="creator-title-btn">
+      <div className="creator-title-btn-container">
         <h2 className="creator-title">
           Here, you can create your workout by adding days and adding exercises
           at this days.
@@ -18,9 +18,9 @@ export default function CreatorMain() {
 
       <section className="workout-days">
         <div className="day">
-          <div className="day-title-btn">
+          <div className="day-title-btn-container">
             <h3 className="day-title">Day 1</h3>
-            <button className="day-button app-btn-primary">Add exercise</button>
+            <button className="day-btn app-btn-primary">Add exercise</button>
           </div>
           <div className="day-exercises">
             <ExerciseCard
