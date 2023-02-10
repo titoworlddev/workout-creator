@@ -29,7 +29,7 @@
     var(--border-radius);
 }
 
-.mobile-menu li:hover > ul {
+.mobile-menu .mobile-menu-btn:hover > .mobile-menu-dropdown {
   display: block;
 }
 
