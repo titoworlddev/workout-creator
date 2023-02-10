@@ -1,7 +1,7 @@
 main {
   align-items: center;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
   min-height: 100vh;
   padding: 12vh 15%;
 }
@@ -17,9 +17,9 @@ main {
 }
 
 .app-btn-primary {
-  background-color: #fff;
+  background-color: var(--accent-color);
   border: none;
-  color: #000;
+  color: var(--secondary-color);
   font-weight: bold;
   cursor: pointer;
   margin: 0.5rem 0;
@@ -34,12 +34,12 @@ main {
   -o-border-radius: var(--border-radius);
 }
 .app-btn-primary a {
-  color: #000;
+  color: var(--secondary-color);
   text-decoration: none;
   font-weight: bold;
 }
 .app-btn-primary:hover {
-  background-color: #ffffffe8;
+  background-color: var(--accent-hover-color);
 }
 .app-btn-primary-big {
   font-size: 1.1rem;

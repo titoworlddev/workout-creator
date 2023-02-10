@@ -1,6 +1,9 @@
 :root {
   --primary-color: #5768ff;
-  --border-radius: 0.5rem;
+  --secondary-color: #000000;
+  --accent-color: #fff;
+  --accent-hover-color: #ffffffe8;
+  --border-radius: 1rem;
 }
 
 * {
@@ -9,6 +12,27 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--primary-color);
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--primary-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border: 1px solid var(--primary-color);
+
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
+::-webkit-scrollbar-corner {
+  background-color: var(--primary-color);
 }
 
 body {

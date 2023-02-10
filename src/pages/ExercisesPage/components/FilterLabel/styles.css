@@ -1,10 +1,10 @@
 .filter-label {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
   font-size: 1rem;
+  gap: 0.5rem;
+  justify-content: space-between;
 }
 
 .filter-label p {
@@ -12,8 +12,10 @@
 }
 
 .filter-label select {
+  color: var(--secondary-color);
   font-weight: 600;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 
   border-radius: var(--border-radius);
   -webkit-border-radius: var(--border-radius);
@@ -25,4 +27,12 @@
 
 .filter-label select option {
   font-weight: 600;
+}
+.filter-label select option:hover {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+.filter-label select option:checked {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
 }

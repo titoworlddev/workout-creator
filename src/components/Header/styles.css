@@ -1,5 +1,6 @@
 .app-header {
   background-color: var(--primary-color);
+  color: var(--secondary-color);
   padding: 1rem 15%;
   display: flex;
   justify-content: space-between;
