@@ -2,7 +2,7 @@
   display: none;
   position: absolute;
   background-color: var(--accent-color);
-  margin: 8px 0 0 -52px;
+  margin: 8px 0 0 -54px;
   padding: 0 8px;
 
   border-radius: var(--border-radius);
@@ -10,6 +10,14 @@
   -moz-border-radius: var(--border-radius);
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
+}
+
+.mobile-menu .mobile-menu-button:hover {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  -webkit-border-radius: var(--border-radius) var(--border-radius) 0 0;
+  -moz-border-radius: var(--border-radius) var(--border-radius) 0 0;
+  -ms-border-radius: var(--border-radius) var(--border-radius) 0 0;
+  -o-border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .mobile-menu li:hover > ul {
