@@ -7,7 +7,9 @@ import HeaderDesktopMenu from '../HeaderDesktopMenu/HeaderDesktopMenu';
 import HeaderMobileMenu from '../HeaderMobileMenu/HeaderMobileMenu';
 
 export default function Header() {
-  const [headerTitle, setHeaderTitle] = useState('Workout Creator');
+  const [headerTitle, setHeaderTitle] = useState(
+    window.innerWidth > 1024 ? 'Workout Creator' : 'WC'
+  );
 
   const setTitleText = () => {
     window.innerWidth > 1024
