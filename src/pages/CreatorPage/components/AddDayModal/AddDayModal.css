@@ -1,18 +1,23 @@
 dialog {
-  background-color: #5364f5;
   border: none;
-  border-radius: 1rem;
   margin: auto;
-  padding: 1rem 3rem;
+
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 dialog .modal-content {
+  background-color: #5364f5;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem 3rem;
 }
 
 dialog h3 {
