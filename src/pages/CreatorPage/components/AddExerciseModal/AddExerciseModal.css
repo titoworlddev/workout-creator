@@ -47,9 +47,11 @@ dialog button.cancel {
   background-color: rgba(0, 0, 0, 0.25);
   color: var(--accent-color);
 }
-dialog button {
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  width: 100px;
+dialog button.cancel:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+dialog .choose-exercise-container {
+  display: flex;
+  justify-content: space-between;
 }

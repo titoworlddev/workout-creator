@@ -1,21 +1,13 @@
 export function modalCloser() {
   const dayModal = document.querySelector('#day-modal');
   const exerciseModal = document.querySelector('#exercise-modal');
-  const dayModalContent = document.querySelector('.day-modal-content');
-  const exerciseModalContent = document.querySelector(
-    '.exercise-modal-content'
-  );
-  const dialogChildren = [
-    ...Array.from(dayModal.children),
-    ...Array.from(exerciseModal.children),
-    ...Array.from(dayModalContent.children),
-    ...Array.from(exerciseModalContent.children)
+  const modalChildren = [
+    ...Array.from(dayModal.querySelectorAll('*')),
+    ...Array.from(exerciseModal.querySelectorAll('*'))
   ];
   window.addEventListener('click', event => {
-    if (
-      !dialogChildren.includes(event.target) &&
-      (dayModal.open || exerciseModal.open)
-    ) {
+    const isSomeModalOpen = dayModal.open || exerciseModal.open;
+    if (!modalChildren.includes(event.target) && isSomeModalOpen) {
       dayModal.close();
       exerciseModal.close();
     }

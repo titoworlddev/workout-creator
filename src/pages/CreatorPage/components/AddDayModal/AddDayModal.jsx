@@ -3,13 +3,13 @@ import './AddDayModal.css';
 
 export default function AddDayModal() {
   const handleCloseModal = () => {
-    const dialog = document.querySelector('dialog');
+    const dialog = document.querySelector('#day-modal');
     dialog.close();
   };
 
   return (
     <dialog id="day-modal">
-      <div className="day-modal-content">
+      <div className="day-modal-content" id="day-modal-content">
         <h3>Add new day</h3>
         <label htmlFor="day-name">Name:</label>
         <input type="text" name="day-name" id="day-name" />
@@ -24,10 +24,16 @@ export default function AddDayModal() {
           <option value="Sunday">Sunday</option>
         </select>
         <div className="modal-buttons-container">
-          <button id="cancel" className="cancel" onClick={handleCloseModal}>
+          <button
+            id="cancel"
+            className="app-btn-primary cancel"
+            onClick={handleCloseModal}>
             Cancel
           </button>
-          <button id="cancel" className="add" onClick={handleCloseModal}>
+          <button
+            id="cancel"
+            className="app-btn-primary add"
+            onClick={handleCloseModal}>
             Add
           </button>
         </div>
