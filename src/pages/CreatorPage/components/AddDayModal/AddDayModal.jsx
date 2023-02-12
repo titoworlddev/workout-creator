@@ -9,7 +9,7 @@ export default function AddDayModal() {
 
   return (
     <dialog id="day-modal">
-      <div className="modal-content">
+      <div className="day-modal-content">
         <h3>Add new day</h3>
         <label htmlFor="day-name">Name:</label>
         <input type="text" name="day-name" id="day-name" />

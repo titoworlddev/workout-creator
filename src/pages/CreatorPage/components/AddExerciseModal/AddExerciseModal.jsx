@@ -9,9 +9,14 @@ export default function AddExerciseModal() {
 
   return (
     <dialog id="exercise-modal">
-      <div className="modal-content">
+      <div className="exercise-modal-content">
         <h3>Add new exercise</h3>
-        <label htmlFor="day-name">Exercise: {}</label>
+        <p>Exercise: </p>
+        <label htmlFor="sets-input">Sets:</label>
+        <input type="text" name="sets-input" id="sets-input" />
+        <label htmlFor="reps-input">Reps:</label>
+        <input type="text" name="reps-input" id="reps-input" />
+
         <div className="modal-buttons-container">
           <button id="cancel" className="cancel" onClick={handleCloseModal}>
             Cancel
