@@ -1,14 +1,23 @@
 import React from 'react';
 import './WorkoutDay.css';
 import ExerciseCard from '../../../../components/ExerciseCard/ExerciseCard';
+import AddExerciseModal from '../AddExerciseModal/AddExerciseModal';
 
 export default function WorkoutDay({ dayName = 'Chest' }) {
+  const handleShowModal = () => {
+    const dialog = document.querySelector('#exercise-modal');
+    setTimeout(() => dialog.showModal(), 100);
+  };
+
   return (
     <section className="workout-days">
       <div className="day">
         <div className="day-title-btn-container">
-          <h3 className="day-title">Lunes - {dayName}</h3>
-          <button className="day-btn app-btn-primary">Add exercise</button>
+          <h3 className="day-title">Monday - {dayName}</h3>
+          <button className="day-btn app-btn-primary" onClick={handleShowModal}>
+            Add exercise
+          </button>
+          <AddExerciseModal />
         </div>
         <div className="day-exercises">
           <ExerciseCard

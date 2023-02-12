@@ -8,12 +8,12 @@ export default function AddDayModal() {
   };
 
   return (
-    <dialog>
-      <div class="modal-content">
+    <dialog id="day-modal">
+      <div className="modal-content">
         <h3>Add new day</h3>
-        <label for="day-name">Name:</label>
+        <label htmlFor="day-name">Name:</label>
         <input type="text" name="day-name" id="day-name" />
-        <label for="wee-day">Day of the week:</label>
+        <label htmlFor="wee-day">Day of the week:</label>
         <select name="week-day" id="week-day">
           <option value="Monday">Monday</option>
           <option value="Tuesday">Tuesday</option>
@@ -23,11 +23,11 @@ export default function AddDayModal() {
           <option value="Saturday">Saturday</option>
           <option value="Sunday">Sunday</option>
         </select>
-        <div class="modal-buttons-container">
-          <button id="cancel" class="cancel" onClick={handleCloseModal}>
+        <div className="modal-buttons-container">
+          <button id="cancel" className="cancel" onClick={handleCloseModal}>
             Cancel
           </button>
-          <button id="cancel" class="add" onClick={handleCloseModal}>
+          <button id="cancel" className="add" onClick={handleCloseModal}>
             Add
           </button>
         </div>

@@ -3,18 +3,11 @@ import './CreatorMain.css';
 
 import WorkoutDay from '../WorkoutDay/WorkoutDay';
 import AddDayModal from '../AddDayModal/AddDayModal';
+import { modalCloser } from './modalCloser';
 
 export default function CreatorMain() {
   useEffect(() => {
-    const dialog = document.querySelector('dialog');
-    const modalContent = document.querySelector('.modal-content');
-    const dialogChildren = [
-      ...Array.from(dialog.children),
-      ...Array.from(modalContent.children)
-    ];
-    window.addEventListener('click', event => {
-      !dialogChildren.includes(event.target) && dialog.open && dialog.close();
-    });
+    modalCloser();
   }, []);
 
   const handleShowModal = () => {
@@ -39,7 +32,7 @@ export default function CreatorMain() {
         <AddDayModal />
       </div>
 
-      <div class="workout-days">
+      <div className="workout-days">
         <WorkoutDay />
         <WorkoutDay />
         <WorkoutDay />
