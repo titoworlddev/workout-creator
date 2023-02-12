@@ -6,7 +6,7 @@
   margin-bottom: 2rem;
 }
 
-.creator-main .btn-container {
+.creator-main .creator-title-btn-container .btn-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -15,6 +15,12 @@
   .creator-main .btn-container {
     width: 100%;
   }
+}
+
+.creator-main .workout-days {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .creator-main .day-title-btn-container {

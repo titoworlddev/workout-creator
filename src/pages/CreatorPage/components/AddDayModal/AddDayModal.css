@@ -1,0 +1,49 @@
+dialog {
+  background-color: #5364f5;
+  border: none;
+  border-radius: 1rem;
+  margin: auto;
+  padding: 1rem 3rem;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog .modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+dialog h3 {
+  color: #fff;
+  text-align: center;
+}
+dialog label {
+  color: #fff;
+}
+
+dialog input,
+dialog select {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+dialog .modal-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+dialog button.cancel {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+dialog button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  width: 100px;
+}
