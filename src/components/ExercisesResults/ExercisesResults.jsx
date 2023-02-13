@@ -1,6 +1,6 @@
 import React from 'react';
 import './ExercisesResults.css';
-import ExerciseCard from '../../../../components/ExerciseCard/ExerciseCard';
+import ExerciseCard from '../ExerciseCard/ExerciseCard';
 
 export default function ExercisesResults({ exercises }) {
   return (

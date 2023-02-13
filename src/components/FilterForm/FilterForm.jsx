@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './FilterForm.css';
 
-import { PARTS, TARGETS, EQUIPMENTS } from '../../../../services/getExercises';
+import { PARTS, TARGETS, EQUIPMENTS } from '../../services/getExercises';
 
 import FilterLabel from '../FilterLabel/FilterLabel';
 
