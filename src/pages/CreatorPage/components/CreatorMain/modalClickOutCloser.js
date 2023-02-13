@@ -1,4 +1,4 @@
-export function modalCloser() {
+export function modalClickOutCloser() {
   const dayModal = document.querySelector('#day-modal');
   const exerciseModal = document.querySelector('#exercise-modal');
   const modalChildren = [

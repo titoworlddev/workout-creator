@@ -3,11 +3,11 @@ import './CreatorMain.css';
 
 import WorkoutDay from '../WorkoutDay/WorkoutDay';
 import AddDayModal from '../AddDayModal/AddDayModal';
-import { modalCloser } from './modalCloser';
+import { modalClickOutCloser } from './modalClickOutCloser';
 
 export default function CreatorMain() {
   useEffect(() => {
-    modalCloser();
+    modalClickOutCloser();
   }, []);
 
   const handleShowModal = () => {
