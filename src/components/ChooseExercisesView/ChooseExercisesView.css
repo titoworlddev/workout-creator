@@ -1,0 +1,9 @@
+.choose-exercises-view {
+  padding: 8px;
+  max-height: 700px;
+  overflow: auto;
+}
+
+.choose-exercises-view .exercise-card {
+  background-color: var(--secondary-color);
+}

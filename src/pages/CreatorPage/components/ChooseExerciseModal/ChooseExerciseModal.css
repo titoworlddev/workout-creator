@@ -1,0 +1,11 @@
+.choose-exercise-modal {
+  max-height: 90%;
+  width: 60%;
+}
+.choose-exercise-modal::backdrop {
+  background-color: transparent;
+}
+
+.choose-exercise-modal .exercises-container {
+  padding: 0;
+}
