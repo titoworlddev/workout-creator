@@ -1,6 +1,6 @@
 import React from 'react';
 import './AddDayModal.css';
-import { handleCloseModal } from '../../../../utils/functions/handleCloseModal';
+import { handleCloseModal } from '../../../../utils/functions/handleModalFunctions';
 
 export default function AddDayModal() {
   return (

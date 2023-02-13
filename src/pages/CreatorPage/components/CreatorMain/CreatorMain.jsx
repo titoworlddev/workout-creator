@@ -4,16 +4,12 @@ import './CreatorMain.css';
 import WorkoutDay from '../WorkoutDay/WorkoutDay';
 import AddDayModal from '../AddDayModal/AddDayModal';
 import { modalClickOutCloser } from './modalClickOutCloser';
+import { handleShowModal } from '../../../../utils/functions/handleModalFunctions';
 
 export default function CreatorMain() {
   useEffect(() => {
     modalClickOutCloser();
   }, []);
-
-  const handleShowModal = () => {
-    const dialog = document.querySelector('dialog');
-    setTimeout(() => dialog.showModal(), 100);
-  };
 
   return (
     <main className="creator-main">
@@ -25,7 +21,7 @@ export default function CreatorMain() {
         <div className="btn-container">
           <button
             className="btn-creator app-btn-primary"
-            onClick={handleShowModal}>
+            onClick={() => handleShowModal('#day-modal')}>
             Add day
           </button>
         </div>
