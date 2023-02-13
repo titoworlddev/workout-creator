@@ -3,7 +3,7 @@ import './CreatorMain.css';
 
 import WorkoutDay from '../WorkoutDay/WorkoutDay';
 import AddDayModal from '../AddDayModal/AddDayModal';
-import { modalClickOutCloser } from './modalClickOutCloser';
+import { modalClickOutCloser } from '../../../../utils/functions/modalClickOutCloser';
 import { handleShowModal } from '../../../../utils/functions/handleModalFunctions';
 
 export default function CreatorMain() {
