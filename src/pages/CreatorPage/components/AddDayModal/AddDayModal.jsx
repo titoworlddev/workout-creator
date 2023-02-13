@@ -1,12 +1,8 @@
 import React from 'react';
 import './AddDayModal.css';
+import { handleCloseModal } from '../../../../utils/functions/handleCloseModal';
 
 export default function AddDayModal() {
-  const handleCloseModal = () => {
-    const dialog = document.querySelector('#day-modal');
-    dialog.close();
-  };
-
   return (
     <dialog id="day-modal">
       <div className="day-modal-content" id="day-modal-content">
@@ -27,13 +23,13 @@ export default function AddDayModal() {
           <button
             id="cancel"
             className="app-btn-primary cancel"
-            onClick={handleCloseModal}>
+            onClick={() => handleCloseModal('#day-modal')}>
             Cancel
           </button>
           <button
             id="cancel"
             className="app-btn-primary add"
-            onClick={handleCloseModal}>
+            onClick={() => handleCloseModal('#day-modal')}>
             Add
           </button>
         </div>

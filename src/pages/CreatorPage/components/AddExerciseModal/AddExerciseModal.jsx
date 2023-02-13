@@ -1,12 +1,8 @@
 import React from 'react';
 import './AddExerciseModal.css';
+import { handleCloseModal } from '../../../../utils/functions/handleCloseModal';
 
 export default function AddExerciseModal() {
-  const handleCloseModal = () => {
-    const dialog = document.querySelector('#exercise-modal');
-    dialog.close();
-  };
-
   return (
     <dialog id="exercise-modal">
       <div className="exercise-modal-content" id="exercise-modal-content">
@@ -24,13 +20,13 @@ export default function AddExerciseModal() {
           <button
             id="cancel"
             className="app-btn-primary cancel"
-            onClick={handleCloseModal}>
+            onClick={() => handleCloseModal('#exercise-modal')}>
             Cancel
           </button>
           <button
             id="cancel"
             className="app-btn-primary add"
-            onClick={handleCloseModal}>
+            onClick={() => handleCloseModal('#exercise-modal')}>
             Add
           </button>
         </div>
