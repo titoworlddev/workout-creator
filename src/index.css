@@ -1,6 +1,6 @@
 :root {
   --primary-color: #5364f5;
-  --secondary-color: #0f0f0f;
+  --secondary-color: #141414;
   --accent-color: #ececec;
   --accent-hover-color: #ececece8;
   --border-radius: 1rem;
@@ -41,6 +41,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 code {

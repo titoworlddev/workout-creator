@@ -1,7 +1,5 @@
 main {
   align-items: center;
-  background-color: var(--secondary-color);
-  color: var(--accent-color);
   min-height: 100vh;
   padding: 12vh 15%;
 }
