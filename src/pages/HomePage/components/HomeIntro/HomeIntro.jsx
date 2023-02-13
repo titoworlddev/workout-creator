@@ -4,7 +4,7 @@ import { Link } from 'wouter';
 export default function HomeIntro() {
   return (
     <>
-      <h2>Dou you want to create your own exercises? This is a test</h2>
+      <h2>Dou you want to create your own exercises?</h2>
       <br />
       <p>
         Are you the type of person who likes to train in his own way?
