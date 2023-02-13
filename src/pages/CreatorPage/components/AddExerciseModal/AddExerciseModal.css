@@ -13,7 +13,7 @@ dialog::backdrop {
 }
 
 dialog .exercise-modal-content {
-  background-color: #5364f5;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -21,12 +21,12 @@ dialog .exercise-modal-content {
 }
 
 dialog h3 {
-  color: #fff;
+  color: var(--accent-color);
   text-align: center;
 }
 dialog label,
 dialog p {
-  color: #fff;
+  color: var(--accent-color);
 }
 
 dialog input,

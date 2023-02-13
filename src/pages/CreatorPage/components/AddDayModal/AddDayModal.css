@@ -13,7 +13,7 @@ dialog::backdrop {
 }
 
 dialog .day-modal-content {
-  background-color: #5364f5;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -21,11 +21,11 @@ dialog .day-modal-content {
 }
 
 dialog h3 {
-  color: #fff;
+  color: var(--accent-color);
   text-align: center;
 }
 dialog label {
-  color: #fff;
+  color: var(--accent-color);
 }
 
 dialog input,
