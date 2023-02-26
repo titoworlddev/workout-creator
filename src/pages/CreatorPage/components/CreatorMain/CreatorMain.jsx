@@ -5,8 +5,11 @@ import WorkoutDay from '../WorkoutDay/WorkoutDay';
 import AddDayModal from '../AddDayModal/AddDayModal';
 import { modalClickOutCloser } from '../../../../utils/functions/modalClickOutCloser';
 import { handleShowModal } from '../../../../utils/functions/handleModalFunctions';
+import { useWorkoutInfo } from '../../../../hooks/useWorkoutInfo';
 
 export default function CreatorMain() {
+  const [workoutInfo, setWorkoutInfo] = useWorkoutInfo();
+
   useEffect(() => {
     modalClickOutCloser();
   }, []);
@@ -29,9 +32,9 @@ export default function CreatorMain() {
       </div>
 
       <div className="workout-days">
-        <WorkoutDay />
-        <WorkoutDay />
-        <WorkoutDay />
+        {workoutInfo.workoutDays.map((day, index) => (
+          <WorkoutDay key={day.dayName} dayName={day.dayName} />
+        ))}
       </div>
     </main>
   );
