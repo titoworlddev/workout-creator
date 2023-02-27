@@ -12,6 +12,10 @@ let workoutInfoDefault = {
         new WorkoutExercise({ exerciseId: '0003', sets: 4, reps: 12 }),
         new WorkoutExercise({ exerciseId: '1512', sets: 4, reps: 12 })
       ]
+    },
+    {
+      dayName: 'Pechaco2',
+      dayExercises: []
     }
   ]
 };
