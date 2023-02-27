@@ -22,10 +22,6 @@ let workoutInfoDefault = {
         new WorkoutExerciseModel({ exerciseId: '0003', sets: 4, reps: 12 }),
         new WorkoutExerciseModel({ exerciseId: '1512', sets: 4, reps: 12 })
       ]
-    }),
-    new WorkoutDayModel({
-      dayName: 'Pechaco2',
-      dayExercises: []
     })
   ]
 };
