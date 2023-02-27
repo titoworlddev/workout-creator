@@ -6,8 +6,8 @@ import { handleShowModal } from '../../../../utils/functions/handleModalFunction
 import { getExercises } from '../../../../services/getExercises';
 import { useWorkoutInfo } from '../../../../hooks/useWorkoutInfo';
 
-export default function WorkoutDay({ dayName = 'Chest' }) {
-  const [workoutInfo, setWorkoutInfo] = useWorkoutInfo();
+export default function WorkoutDay({ dayName = '' }) {
+  const [workoutInfo] = useWorkoutInfo();
   const [dayExercises, setDayExercises] = useState([]);
   const exercises = getExercises();
 
@@ -29,6 +29,7 @@ export default function WorkoutDay({ dayName = 'Chest' }) {
           </button>
           <AddExerciseModal />
         </div>
+
         <div className="day-exercises">
           {dayExercises.map((exercise, index) => {
             const exer = exercises.find(ex => ex.id === exercise.exerciseId);

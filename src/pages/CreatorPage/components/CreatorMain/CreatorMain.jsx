@@ -8,7 +8,7 @@ import { handleShowModal } from '../../../../utils/functions/handleModalFunction
 import { useWorkoutInfo } from '../../../../hooks/useWorkoutInfo';
 
 export default function CreatorMain() {
-  const [workoutInfo, setWorkoutInfo] = useWorkoutInfo();
+  const [workoutInfo] = useWorkoutInfo();
 
   useEffect(() => {
     modalClickOutCloser();
@@ -32,7 +32,7 @@ export default function CreatorMain() {
       </div>
 
       <div className="workout-days">
-        {workoutInfo.workoutDays.map((day, index) => (
+        {workoutInfo.workoutDays.map(day => (
           <WorkoutDay key={day.dayName} dayName={day.dayName} />
         ))}
       </div>
