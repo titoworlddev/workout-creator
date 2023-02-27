@@ -1,27 +1,18 @@
 import { useEffect, useState } from 'react';
-import WorkoutDay from '../models/workoutDay';
+import WorkoutExercise from '../models/workoutExercise';
 
 let workoutInfoDefault = {
   workoutName: 'Workout Name',
   workoutDays: [
-    new WorkoutDay('Pechardaco', [
-      {
-        dayExercises: [
-          {
-            info: {
-              bodyPart: 'waist',
-              equipment: 'body weight',
-              gifUrl: 'http://d205bpvrqc9yn1.cloudfront.net/0001.gif',
-              id: '0001',
-              name: '3/4 sit-up',
-              target: 'abs'
-            },
-            sets: 4,
-            reps: 12
-          }
-        ]
-      }
-    ])
+    {
+      dayName: 'Pechaco',
+      dayExercises: [
+        new WorkoutExercise({ exerciseId: '0001', sets: 4, reps: 12 }),
+        new WorkoutExercise({ exerciseId: '0002', sets: 4, reps: 12 }),
+        new WorkoutExercise({ exerciseId: '0003', sets: 4, reps: 12 }),
+        new WorkoutExercise({ exerciseId: '1512', sets: 4, reps: 12 })
+      ]
+    }
   ]
 };
 
