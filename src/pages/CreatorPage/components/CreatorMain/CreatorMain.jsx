@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './CreatorMain.css';
 
 import WorkoutDay from '../WorkoutDay/WorkoutDay';
@@ -9,10 +9,14 @@ import { useWorkoutInfo } from '../../../../hooks/useWorkoutInfo';
 
 export default function CreatorMain() {
   const [workoutInfo] = useWorkoutInfo();
+  const [workoutDays, setWorkoutDays] = useState([]);
 
   useEffect(() => {
     modalClickOutCloser();
   }, []);
+  useEffect(() => {
+    setWorkoutDays(workoutInfo.workoutDays);
+  }, [workoutInfo]);
 
   return (
     <main className="creator-main">
@@ -28,11 +32,12 @@ export default function CreatorMain() {
             Add day
           </button>
         </div>
+        11
         <AddDayModal />
       </div>
 
       <div className="workout-days">
-        {workoutInfo.workoutDays.map(day => (
+        {workoutDays.map(day => (
           <WorkoutDay key={day.dayName} dayName={day.dayName} />
         ))}
       </div>
