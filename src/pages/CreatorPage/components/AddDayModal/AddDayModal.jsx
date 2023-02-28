@@ -1,12 +1,8 @@
 import React from 'react';
 import './AddDayModal.css';
 import { handleCloseModal } from '../../../../utils/functions/handleModalFunctions';
-import { addDayToInfo } from '../../../../utils/functions/addDayToInfo';
-import { useWorkoutInfo } from '../../../../hooks/useWorkoutInfo';
 
-export default function AddDayModal() {
-  const [workoutInfo, setWorkoutInfo] = useWorkoutInfo();
-
+export default function AddDayModal({ setWorkoutInfo = () => {} }) {
   return (
     <dialog id="day-modal">
       <div className="day-modal-content" id="day-modal-content">
@@ -33,12 +29,7 @@ export default function AddDayModal() {
           <button
             id="add-btn"
             className="app-btn-primary add"
-            onClick={() => {
-              const dayNameInput = document.getElementById('day-name-input');
-              addDayToInfo(dayNameInput.value, workoutInfo, setWorkoutInfo);
-              console.log(workoutInfo);
-              handleCloseModal('#day-modal');
-            }}>
+            onClick={setWorkoutInfo}>
             Add
           </button>
         </div>

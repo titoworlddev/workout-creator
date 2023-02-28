@@ -4,10 +4,9 @@ import ExerciseCard from '../../../../components/ExerciseCard/ExerciseCard';
 import AddExerciseModal from '../AddExerciseModal/AddExerciseModal';
 import { handleShowModal } from '../../../../utils/functions/handleModalFunctions';
 import { getExercises } from '../../../../services/getExercises';
-import { useWorkoutInfo } from '../../../../hooks/useWorkoutInfo';
+import { workoutInfo } from '../../../../hooks/useWorkoutInfo';
 
 export default function WorkoutDay({ dayName = '' }) {
-  const [workoutInfo] = useWorkoutInfo();
   const [dayExercises, setDayExercises] = useState([]);
   const exercises = getExercises();
 
@@ -15,7 +14,7 @@ export default function WorkoutDay({ dayName = '' }) {
     setDayExercises(
       workoutInfo.workoutDays.find(day => day.dayName === dayName).dayExercises
     );
-  }, [dayName, workoutInfo]);
+  }, [dayName]);
 
   return (
     <section className="workout-days">

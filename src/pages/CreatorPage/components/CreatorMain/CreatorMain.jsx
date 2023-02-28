@@ -5,18 +5,15 @@ import WorkoutDay from '../WorkoutDay/WorkoutDay';
 import AddDayModal from '../AddDayModal/AddDayModal';
 import { modalClickOutCloser } from '../../../../utils/functions/modalClickOutCloser';
 import { handleShowModal } from '../../../../utils/functions/handleModalFunctions';
-import { useWorkoutInfo } from '../../../../hooks/useWorkoutInfo';
+import { workoutInfo } from '../../../../hooks/useWorkoutInfo';
+import { addDayToWorkoutInfo } from '../../../../utils/functions/addDayToWorkoutInfo';
 
 export default function CreatorMain() {
-  const [workoutInfo] = useWorkoutInfo();
-  const [workoutDays, setWorkoutDays] = useState([]);
+  const [state, setState] = useState({});
 
   useEffect(() => {
     modalClickOutCloser();
   }, []);
-  useEffect(() => {
-    setWorkoutDays(workoutInfo.workoutDays);
-  }, [workoutInfo]);
 
   return (
     <main className="creator-main">
@@ -32,14 +29,19 @@ export default function CreatorMain() {
             Add day
           </button>
         </div>
-        11
-        <AddDayModal />
+        <AddDayModal
+          setWorkoutInfo={() =>
+            addDayToWorkoutInfo(() => setState({ ...state }))
+          }
+        />
       </div>
 
       <div className="workout-days">
-        {workoutDays.map(day => (
-          <WorkoutDay key={day.dayName} dayName={day.dayName} />
-        ))}
+        {workoutInfo.workoutDays
+          ? workoutInfo.workoutDays.map((day, index) => (
+              <WorkoutDay key={day.dayName + index} dayName={day.dayName} />
+            ))
+          : null}
       </div>
     </main>
   );
