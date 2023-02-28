@@ -25,12 +25,7 @@ export default function CreatorMain() {
         <div className="btn-container">
           <button
             className="btn-creator app-btn-primary"
-            onClick={() => {
-              console.log(workoutInfo);
-              workoutInfo.workoutName = 'Cambiado desde funcion';
-              localStorage.setItem('workoutInfo', JSON.stringify(workoutInfo));
-              handleShowModal('#day-modal');
-            }}>
+            onClick={() => handleShowModal('#day-modal')}>
             Add day
           </button>
         </div>

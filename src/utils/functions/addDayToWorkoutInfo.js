@@ -9,8 +9,10 @@ export function addDayToWorkoutInfo(setState) {
     dayName: dayNameInput.value,
     dayExercises: []
   });
-
   workoutInfo.workoutDays.push(newWorkoutDay);
+
+  localStorage.setItem('workoutInfo', JSON.stringify(workoutInfo));
+  console.log(workoutInfo);
 
   setState();
 
