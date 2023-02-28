@@ -5,12 +5,10 @@ import { Route } from 'wouter';
 import ExercisesPage from './pages/ExercisesPage/ExercisesPage';
 import CreatorPage from './pages/CreatorPage/CreatorPage';
 import HomePage from './pages/HomePage/HomePage';
+import { initalizeLocalStorage } from './utils/functions/saveAtLocalStorage';
 
 function App() {
-  localStorage.setItem(
-    'workoutInfo',
-    JSON.stringify({ workoutName: 'Desde App', workoutDays: [] })
-  );
+  initalizeLocalStorage();
 
   return (
     <>
