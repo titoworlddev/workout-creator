@@ -9,7 +9,7 @@ export default function AddDayModal({ setWorkoutInfo = () => {} }) {
         <h3>Add new day</h3>
         <label htmlFor="day-name-input">Name:</label>
         <input type="text" name="day-name-input" id="day-name-input" />
-        {/* <label htmlFor="wee-day">Day of the week:</label>
+        {/* <label htmlFor="week-day">Day of the week:</label>
         <select name="week-day" id="week-day">
           <option value="Monday">Monday</option>
           <option value="Tuesday">Tuesday</option>

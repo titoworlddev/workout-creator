@@ -7,6 +7,11 @@ import CreatorPage from './pages/CreatorPage/CreatorPage';
 import HomePage from './pages/HomePage/HomePage';
 
 function App() {
+  localStorage.setItem(
+    'workoutInfo',
+    JSON.stringify({ workoutName: 'Desde App', workoutDays: [] })
+  );
+
   return (
     <>
       <Route path="/" component={HomePage} />
