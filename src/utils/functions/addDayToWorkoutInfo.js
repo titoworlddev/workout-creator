@@ -1,6 +1,7 @@
 import { workoutInfo } from '../../hooks/useWorkoutInfo';
 import WorkoutDayModel from '../../models/workoutDayModel';
 import { handleCloseModal } from './handleModalFunctions';
+import { saveAtLocalStorage } from './saveAtLocalStorage';
 
 export function addDayToWorkoutInfo(setState) {
   const dayNameInput = document.getElementById('day-name-input');
@@ -11,9 +12,7 @@ export function addDayToWorkoutInfo(setState) {
   });
   workoutInfo.workoutDays.push(newWorkoutDay);
 
-  localStorage.setItem('workoutInfo', JSON.stringify(workoutInfo));
-  console.log(workoutInfo);
-
+  saveAtLocalStorage();
   setState();
 
   dayNameInput.value = '';
