@@ -1,10 +1,11 @@
 import { workoutInfo } from '../../hooks/useWorkoutInfo';
 
 export const initalizeLocalStorage = () => {
-  localStorage.setItem(
-    'workoutInfo',
-    JSON.stringify({ workoutName: '', workoutDays: [] })
-  );
+  if (!localStorage.getItem('workoutInfo'))
+    localStorage.setItem(
+      'workoutInfo',
+      JSON.stringify({ workoutName: '', workoutDays: [] })
+    );
 };
 
 export const saveAtLocalStorage = () =>
