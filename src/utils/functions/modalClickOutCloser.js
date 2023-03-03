@@ -6,9 +6,13 @@ export function modalClickOutCloser() {
   window.addEventListener('click', event => {
     dayModal.forEach(modal => {
       const children = Array.from(modal.querySelectorAll('*'));
-      if (!children.includes(event.target) && modal.open) {
-        modal.close();
-      }
+      if (!children.includes(event.target) && modal.open) modal.close();
     });
+  });
+
+  window.addEventListener('keyup', event => {
+    if (event.key === 'Escape') {
+      dayModal.forEach(modal => modal.open && modal.close());
+    }
   });
 }
