@@ -7,6 +7,7 @@ import { modalClickOutCloser } from '../../../../utils/functions/modalClickOutCl
 import { handleShowModal } from '../../../../utils/functions/handleModalFunctions';
 import { workoutInfo } from '../../../../hooks/useWorkoutInfo';
 import { addDayToWorkoutInfo } from '../../../../utils/functions/addDayToWorkoutInfo';
+import ErrorModal from '../../../../components/ErrorModal/ErrorModal';
 
 export default function CreatorMain() {
   const [state, setState] = useState({});
@@ -14,6 +15,16 @@ export default function CreatorMain() {
   useEffect(() => {
     modalClickOutCloser();
   }, []);
+
+  const weekDays = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday'
+  ];
 
   return (
     <main className="creator-main">
@@ -25,21 +36,35 @@ export default function CreatorMain() {
         <div className="btn-container">
           <button
             className="btn-creator app-btn-primary"
-            onClick={() => handleShowModal('#day-modal')}>
+            onClick={() =>
+              handleShowModal(
+                workoutInfo.workoutDays.length === 7
+                  ? '#error-modal'
+                  : '#day-modal'
+              )
+            }>
             Add day
           </button>
         </div>
+
         <AddDayModal
           setWorkoutInfo={() =>
             addDayToWorkoutInfo(() => setState({ ...state }))
           }
         />
+
+        <ErrorModal text="You can't create more days. The week only has 7 days. Delete a day to add a new one or modify an existing one." />
       </div>
 
       <div className="workout-days">
         {workoutInfo.workoutDays
           ? workoutInfo.workoutDays.map((day, index) => (
-              <WorkoutDay key={day.dayName + index} dayName={day.dayName} />
+              <WorkoutDay
+                key={day.dayName + index}
+                dayName={day.dayName}
+                weekDay={weekDays[index]}
+                setState={() => setState({ ...state })}
+              />
             ))
           : null}
       </div>
