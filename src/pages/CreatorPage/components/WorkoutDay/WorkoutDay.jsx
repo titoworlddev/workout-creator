@@ -5,8 +5,13 @@ import AddExerciseModal from '../AddExerciseModal/AddExerciseModal';
 import { handleShowModal } from '../../../../utils/functions/handleModalFunctions';
 import { getExercises } from '../../../../services/getExercises';
 import { workoutInfo } from '../../../../hooks/useWorkoutInfo';
+import { removeDayFromWorkoutInfo } from '../../../../utils/functions/removeDayFromWorkoutInfo';
 
-export default function WorkoutDay({ dayName = '' }) {
+export default function WorkoutDay({
+  dayName = '',
+  weekDay = 'Monday',
+  setState = () => {}
+}) {
   const [dayExercises, setDayExercises] = useState([]);
   const exercises = getExercises();
 
@@ -20,17 +25,29 @@ export default function WorkoutDay({ dayName = '' }) {
     <section className="workout-days">
       <div className="day">
         <div className="day-title-btn-container">
-          <h3 className="day-title">Monday - {dayName}</h3>
-          <button
-            className="day-btn app-btn-primary"
-            onClick={() => handleShowModal('#exercise-modal')}>
-            Add exercise
-          </button>
+          <h3 className="day-title">
+            {weekDay} {dayName !== ' ' && ' -'} {dayName}
+          </h3>
+
+          <div className="btns-container">
+            <button
+              className="app-btn-primary"
+              onClick={() => removeDayFromWorkoutInfo(dayName, setState)}>
+              🗑️
+            </button>
+
+            <button
+              className="day-btn app-btn-primary"
+              onClick={() => handleShowModal('#exercise-modal')}>
+              Add exercise
+            </button>
+          </div>
+
           <AddExerciseModal />
         </div>
 
         <div className="day-exercises">
-          {dayExercises.map((exercise, index) => {
+          {dayExercises.map(exercise => {
             const exer = exercises.find(ex => ex.id === exercise.exerciseId);
             return (
               <ExerciseCard

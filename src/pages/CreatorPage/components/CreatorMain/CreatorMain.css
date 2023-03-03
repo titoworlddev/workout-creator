@@ -22,25 +22,3 @@
   flex-direction: column;
   gap: 2rem;
 }
-
-.creator-main .day-title-btn-container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 8px 0;
-}
-
-.creator-main .day-exercises {
-  display: grid;
-  /* Pongo auto-fill, porque auto-fill lo que hace es rellenar si,
-  no caben en el row, pero si solo hay uno, mantiene el tamano que quiero 
-  como minimo.
-  En cambio auto-fit, si no hay suficientes elementos para rellenar una row,
-  lo que hace es agrandar los elementos para que rellenen toda la linea, 
-  ya sea un elemento o tres, lo cual si es solo un elemento queda muy mal,
-  porque si es por ejemplo una img rompe todo el diseno */
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1rem;
-}
