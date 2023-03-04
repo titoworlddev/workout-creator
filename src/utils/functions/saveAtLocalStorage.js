@@ -1,4 +1,4 @@
-import { workoutInfo } from '../../hooks/useWorkoutInfo';
+import { workoutInfo } from '../variables';
 
 export const initalizeLocalStorage = () => {
   if (!localStorage.getItem('workoutInfo'))

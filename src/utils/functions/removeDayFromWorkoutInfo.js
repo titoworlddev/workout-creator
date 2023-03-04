@@ -1,4 +1,4 @@
-import { workoutInfo } from '../../hooks/useWorkoutInfo';
+import { workoutInfo } from '../variables';
 import { saveAtLocalStorage } from './saveAtLocalStorage';
 
 export function removeDayFromWorkoutInfo(dayName, setState) {
