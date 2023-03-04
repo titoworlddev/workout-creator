@@ -4,7 +4,7 @@ import ExerciseCard from '../../../../components/ExerciseCard/ExerciseCard';
 import AddExerciseModal from '../AddExerciseModal/AddExerciseModal';
 import { handleShowModal } from '../../../../utils/functions/handleModalFunctions';
 import { getExercises } from '../../../../services/getExercises';
-import { workoutInfo } from '../../../../hooks/useWorkoutInfo';
+import { temporals, workoutInfo } from '../../../../utils/variables';
 import { removeDayFromWorkoutInfo } from '../../../../utils/functions/removeDayFromWorkoutInfo';
 
 export default function WorkoutDay({
@@ -38,7 +38,10 @@ export default function WorkoutDay({
 
             <button
               className="day-btn app-btn-primary"
-              onClick={() => handleShowModal('#exercise-modal')}>
+              onClick={() => {
+                temporals.dayNameTempToChooseExercise = dayName;
+                handleShowModal('#exercise-modal');
+              }}>
               Add exercise
             </button>
           </div>
