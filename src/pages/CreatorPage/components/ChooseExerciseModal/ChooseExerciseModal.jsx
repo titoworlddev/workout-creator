@@ -5,13 +5,13 @@ import { handleCloseModal } from '../../../../utils/functions/handleModalFunctio
 
 import ChooseExercisesView from '../../../../components/ChooseExercisesView/ChooseExercisesView';
 
-export default function ChooseExerciseModal() {
+export default function ChooseExerciseModal({ setState = () => {} }) {
   return (
     <dialog id="choose-exercise-modal" className="choose-exercise-modal">
       <div className="exercise-modal-content" id="exercise-modal-content">
         <h3>Choose new exercise</h3>
 
-        <ChooseExercisesView />
+        <ChooseExercisesView setState={setState} />
 
         <div className="modal-buttons-container">
           <button
@@ -19,12 +19,6 @@ export default function ChooseExerciseModal() {
             className="app-btn-primary cancel"
             onClick={() => handleCloseModal('#choose-exercise-modal')}>
             Cancel
-          </button>
-          <button
-            id="cancel"
-            className="app-btn-primary add"
-            onClick={() => handleCloseModal('#choose-exercise-modal')}>
-            Confirm
           </button>
         </div>
       </div>

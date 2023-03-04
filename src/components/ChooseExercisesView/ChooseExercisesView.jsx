@@ -6,7 +6,7 @@ import ChooseExercisesResults from '../ChooseExercisesResults/ChooseExercisesRes
 
 import { getExercises } from '../../services/getExercises';
 
-export default function ChooseExercisesView() {
+export default function ChooseExercisesView({ setState = () => {} }) {
   const [bodyPart, setBodyPart] = useState('back');
   const [target, setTarget] = useState('');
   const [equipment, setEquipment] = useState('');
@@ -37,7 +37,7 @@ export default function ChooseExercisesView() {
 
       <br />
 
-      <ChooseExercisesResults exercises={exercises} />
+      <ChooseExercisesResults exercises={exercises} setState={setState} />
     </section>
   );
 }

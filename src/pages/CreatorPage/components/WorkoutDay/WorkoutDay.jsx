@@ -46,7 +46,7 @@ export default function WorkoutDay({
             </button>
           </div>
 
-          <AddExerciseModal />
+          <AddExerciseModal setParentState={setState} />
         </div>
 
         <div className="day-exercises">
