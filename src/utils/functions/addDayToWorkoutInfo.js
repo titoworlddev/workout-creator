@@ -1,4 +1,4 @@
-import { workoutInfo } from '../../hooks/useWorkoutInfo';
+import { workoutInfo } from '../../utils/variables';
 import WorkoutDayModel from '../../models/workoutDayModel';
 import { handleCloseModal } from './handleModalFunctions';
 import { saveAtLocalStorage } from './saveAtLocalStorage';

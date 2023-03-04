@@ -5,7 +5,7 @@ import WorkoutDay from '../WorkoutDay/WorkoutDay';
 import AddDayModal from '../AddDayModal/AddDayModal';
 import { modalClickOutCloser } from '../../../../utils/functions/modalClickOutCloser';
 import { handleShowModal } from '../../../../utils/functions/handleModalFunctions';
-import { workoutInfo } from '../../../../hooks/useWorkoutInfo';
+import { workoutInfo } from '../../../../utils/variables';
 import { addDayToWorkoutInfo } from '../../../../utils/functions/addDayToWorkoutInfo';
 import ErrorModal from '../../../../components/ErrorModal/ErrorModal';
 

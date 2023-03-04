@@ -39,7 +39,7 @@ export default function WorkoutDay({
             <button
               className="day-btn app-btn-primary"
               onClick={() => {
-                temporals.dayNameTempToChooseExercise = dayName;
+                temporals.dayNameToChooseExerciseTemp = dayName;
                 handleShowModal('#exercise-modal');
               }}>
               Add exercise
