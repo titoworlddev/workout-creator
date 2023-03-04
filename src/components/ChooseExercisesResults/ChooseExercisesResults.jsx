@@ -1,12 +1,13 @@
 import React from 'react';
 import './ChooseExercisesResults.css';
 import ExerciseCard from '../ExerciseCard/ExerciseCard';
-import {
-  handleCloseModal,
-  handleShowModal
-} from '../../utils/functions/handleModalFunctions';
+import { handleCloseModal } from '../../utils/functions/handleModalFunctions';
+import { temporals } from '../../utils/variables';
 
-export default function ChooseExercisesResults({ exercises }) {
+export default function ChooseExercisesResults({
+  exercises = [],
+  setState = () => {}
+}) {
   return (
     <section className="exercises-container">
       {exercises.map((exercise, index) => (
@@ -14,9 +15,9 @@ export default function ChooseExercisesResults({ exercises }) {
           key={index}
           exercise={exercise}
           onClick={() => {
-            // TODO: Add exercise to workout day
+            temporals.exerciseIdTemp = exercise.id;
+            setState();
             handleCloseModal('#choose-exercise-modal');
-            handleShowModal('#exercise-modal');
           }}
         />
       ))}
