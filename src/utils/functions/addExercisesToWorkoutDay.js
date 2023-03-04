@@ -12,6 +12,8 @@ export function addExerciseToWorkoutDay(
     .find(day => day.dayName === dayName)
     .dayExercises.push(exercise);
 
+  localStorage.setItem('workoutInfo', JSON.stringify(workoutInfo));
+
   setsInput.value = '';
   repsInput.value = '';
   temporals.exerciseIdTemp = '';
