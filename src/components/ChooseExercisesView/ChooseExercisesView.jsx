@@ -22,9 +22,9 @@ export default function ChooseExercisesView() {
     );
 
     const exercisesNumber = document.querySelector('.exercises-number');
-    if (exercises.length === 0)
-      exercisesNumber.textContent = 'No exercises found !';
-    else exercisesNumber.textContent = `Showing ${exercises.length} exercises`;
+    exercises.length === 0
+      ? (exercisesNumber.textContent = 'No exercises found !')
+      : (exercisesNumber.textContent = `Showing ${exercises.length} exercises`);
   }, [bodyPart, equipment, exercises.length, target]);
 
   return (
