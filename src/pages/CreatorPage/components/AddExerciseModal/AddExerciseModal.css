@@ -55,3 +55,7 @@ dialog .choose-exercise-container {
   display: flex;
   justify-content: space-between;
 }
+
+dialog .choosed-exercise img {
+  max-height: 250px;
+}
