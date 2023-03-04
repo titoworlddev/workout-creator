@@ -1,4 +1,5 @@
 .choose-exercises-view {
+  padding-top: 0.5rem;
   max-height: 700px;
   overflow: auto;
 }
