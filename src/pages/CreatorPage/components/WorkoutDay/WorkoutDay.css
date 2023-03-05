@@ -4,7 +4,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 8px 0;
+  margin: 0.5rem 0;
+}
+
+.creator-main .day-title-btn-container .day-title {
+  margin: 1rem 0;
 }
 
 .creator-main .day-title-btn-container .btns-container {
