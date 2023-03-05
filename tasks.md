@@ -1,5 +1,6 @@
 # Principales
 
+Arreglar que si no eliges ningun ejercicio no se pueda agregar o que te salte error para que lo agregues
 Arreglar los modals para que siempre tengan los botones y titulo a la vista y se solo sea scrollable el contenido
 Botones para borrar y editar ejercicios
 Copiar dias
