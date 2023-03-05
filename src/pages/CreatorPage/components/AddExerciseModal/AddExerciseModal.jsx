@@ -64,8 +64,8 @@ export default function AddExerciseModal({ setParentState = () => {} }) {
                 temporals.dayNameToChooseExerciseTemp,
                 new WorkoutExerciseModel({
                   exerciseId: temporals.exerciseIdTemp,
-                  sets: repsInput.value,
-                  reps: setsInput.value
+                  sets: setsInput.value,
+                  reps: repsInput.value
                 })
               );
               setParentState();
