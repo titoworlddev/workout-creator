@@ -10,6 +10,7 @@ Crear un path que reciba un parametro de tipo string y que devuelva un json con 
 
 # Secundarias
 
+Hacer que solo se puedan poner numeros en las repeticiones y series
 Quizas hacer que los dias tengan nombre pero de en que esta enfocado o algo asi que quiera poner el usuario, pero por defecto que sea el dia de la semana y que se pueda elegir si agregarlo a mas dias de la semana
 (lo que para decir si se puede poner en mas dias que sea algo como en editar el dia que se pueda elegir si se quiere poner en mas dias o no, o que se pueda copiar ese dia y cuando le das a crear otro dia eliges en que dia agregarlo y pegas el dia que ya tenias creado o que cuando le des a copiar dia te deje elegir en que dia o dias agregarlo y se copia en un dia que hay ya algo, este se reemplaza por el dia que se acaba de copiar)
 
