@@ -49,6 +49,8 @@ export default function FilterForm({
         <button className="form-submit app-btn-primary">Filter</button>
       </div>
 
+      <br />
+
       <h3 className="exercises-number">Showing 1342 exercises</h3>
     </form>
   );
