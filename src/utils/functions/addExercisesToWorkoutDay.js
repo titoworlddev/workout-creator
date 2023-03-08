@@ -5,6 +5,8 @@ export function addExerciseToWorkoutDay(
   dayName = '',
   exercise = new WorkoutExerciseModel()
 ) {
+  if (temporals.exerciseIdTemp === '') return;
+
   const setsInput = document.getElementById('sets-input');
   const repsInput = document.getElementById('reps-input');
 
