@@ -29,7 +29,7 @@ export default function ExerciseCard({
         {series > 0 ? (
           <>
             <hr />
-            <small>Series: {series}</small>
+            <small>Sets: {series}</small>
             <hr />
             <small>Reps: {reps}</small>
           </>

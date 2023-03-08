@@ -5,6 +5,11 @@
   align-items: center;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .creator-main .creator-title-btn-container {
+    margin-bottom: 0;
+  }
+}
 
 .creator-main .creator-title-btn-container .btn-container {
   display: flex;
@@ -14,6 +19,7 @@
 @media screen and (max-width: 1580px) {
   .creator-main .btn-container {
     width: 100%;
+    margin-top: 2rem;
   }
 }
 
