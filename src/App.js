@@ -14,7 +14,7 @@ function App() {
     <>
       <Route path="/" component={HomePage} />
       <Route path="/exercises" component={ExercisesPage} />
-      <Route path="/creator/:workout" component={CreatorPage} />
+      <Route path="/creator" component={CreatorPage} />
     </>
   );
 }

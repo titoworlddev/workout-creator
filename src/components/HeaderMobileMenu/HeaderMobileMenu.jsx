@@ -1,8 +1,7 @@
 import React from 'react';
 import './HeaderMobileMenu.css';
 import { Link } from 'wouter';
-
-const MENU_OPTIONS = ['exercises', 'creator'];
+import { MENU_OPTIONS } from '../../utils/variables';
 
 export default function HeaderMobileMenu() {
   return (
@@ -13,9 +12,9 @@ export default function HeaderMobileMenu() {
           <Link href="/">
             <li className="app-btn-primary">Home</li>
           </Link>
-          {MENU_OPTIONS.map((elem, index) => (
-            <Link href={`${elem}`} key={index}>
-              <li className="app-btn-primary">{elem.capitalize()}</li>
+          {MENU_OPTIONS.map((option, index) => (
+            <Link href={option} key={index}>
+              <li className="app-btn-primary">{option.capitalize()}</li>
             </Link>
           ))}
         </ul>
