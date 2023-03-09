@@ -10,6 +10,7 @@ import ExerciseCard from '../../../../components/ExerciseCard/ExerciseCard';
 import { getExercises } from '../../../../services/getExercises';
 import { addExerciseToWorkoutDay } from '../../../../utils/functions/addExercisesToWorkoutDay';
 import WorkoutExerciseModel from '../../../../models/workoutExerciseModel';
+import ErrorModal from '../../../../components/ErrorModal/ErrorModal';
 
 export default function AddExerciseModal({ setParentState = () => {} }) {
   const [state, setState] = useState({});
@@ -60,20 +61,30 @@ export default function AddExerciseModal({ setParentState = () => {} }) {
             onClick={() => {
               const repsInput = document.getElementById('reps-input');
               const setsInput = document.getElementById('sets-input');
-              addExerciseToWorkoutDay(
-                temporals.dayNameToChooseExerciseTemp,
-                new WorkoutExerciseModel({
-                  exerciseId: temporals.exerciseIdTemp,
-                  sets: setsInput.value,
-                  reps: repsInput.value
-                })
-              );
-              setParentState();
 
-              handleCloseModal('#exercise-modal');
+              if (temporals.exerciseIdTemp === '') {
+                handleShowModal('#add-exercise-error');
+              } else {
+                addExerciseToWorkoutDay(
+                  temporals.dayNameToChooseExerciseTemp,
+                  new WorkoutExerciseModel({
+                    exerciseId: temporals.exerciseIdTemp,
+                    sets: setsInput.value,
+                    reps: repsInput.value
+                  })
+                );
+                setParentState();
+
+                handleCloseModal('#exercise-modal');
+              }
             }}>
             Add
           </button>
+
+          <ErrorModal
+            modalId="add-exercise-error"
+            text="You need to choose an exercise before confirming"
+          />
         </div>
       </div>
     </dialog>

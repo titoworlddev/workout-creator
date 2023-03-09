@@ -39,7 +39,7 @@ export default function CreatorMain() {
             onClick={() =>
               handleShowModal(
                 workoutInfo.workoutDays.length === 7
-                  ? '#error-modal'
+                  ? '#add-day-error'
                   : '#day-modal'
               )
             }>
@@ -54,7 +54,10 @@ export default function CreatorMain() {
           }}
         />
 
-        <ErrorModal text="You can't create more days. The week only has 7 days. Delete a day to add a new one or modify an existing one." />
+        <ErrorModal
+          modalId="add-day-error"
+          text="You can't create more days. The week only has 7 days. Delete a day to add a new one or modify an existing one."
+        />
       </div>
 
       <div className="workout-days">
