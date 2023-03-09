@@ -48,9 +48,10 @@ export default function CreatorMain() {
         </div>
 
         <AddDayModal
-          setWorkoutInfo={() =>
-            addDayToWorkoutInfo(() => setState({ ...state }))
-          }
+          setWorkoutInfo={() => {
+            addDayToWorkoutInfo();
+            setState({ ...state });
+          }}
         />
 
         <ErrorModal text="You can't create more days. The week only has 7 days. Delete a day to add a new one or modify an existing one." />

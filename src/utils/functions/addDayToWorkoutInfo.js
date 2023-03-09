@@ -3,7 +3,7 @@ import WorkoutDayModel from '../../models/workoutDayModel';
 import { handleCloseModal } from './handleModalFunctions';
 import { saveAtLocalStorage } from './saveAtLocalStorage';
 
-export function addDayToWorkoutInfo(setState) {
+export function addDayToWorkoutInfo() {
   const dayNameInput = document.getElementById('day-name-input');
 
   const dayNameAlreadyExists = workoutInfo.workoutDays.find(
@@ -23,7 +23,6 @@ export function addDayToWorkoutInfo(setState) {
   workoutInfo.workoutDays.push(newWorkoutDay);
 
   saveAtLocalStorage();
-  setState();
 
   dayNameInput.value = '';
   handleCloseModal('#day-modal');
