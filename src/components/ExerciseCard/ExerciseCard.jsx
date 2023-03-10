@@ -16,6 +16,8 @@ export default function ExerciseCard({
     <div className="exercise-card" onClick={onClick}>
       {isInWorkout ? (
         <div className="exercise-card-menu">
+          {/* TODO: Add a button to edit the exercise  */}
+
           <button
             className="exercise-card-menu-btn"
             onClick={() => {
