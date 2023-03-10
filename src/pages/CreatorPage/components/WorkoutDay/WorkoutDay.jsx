@@ -13,7 +13,7 @@ export default function WorkoutDay({
   setState = () => {}
 }) {
   const [dayExercises, setDayExercises] = useState([]);
-  const exercises = getExercises();
+  const exercisesFromAPI = getExercises();
 
   useEffect(() => {
     setDayExercises(
@@ -50,14 +50,26 @@ export default function WorkoutDay({
         </div>
 
         <div className="day-exercises">
-          {dayExercises.map(exercise => {
-            const exer = exercises.find(ex => ex.id === exercise.exerciseId);
+          {dayExercises.map((exercise, index) => {
+            const exer = exercisesFromAPI.find(
+              ex => ex.id === exercise.exerciseId
+            );
+
             return (
               <ExerciseCard
-                key={exer.name}
+                key={exer.name + index}
+                index={index}
                 exercise={exer}
                 series={exercise.sets}
                 reps={exercise.reps}
+                isInWorkout={true}
+                dayName={dayName}
+                setParentState={() =>
+                  setDayExercises(
+                    workoutInfo.workoutDays.find(day => day.dayName === dayName)
+                      .dayExercises
+                  )
+                }
               />
             );
           })}
