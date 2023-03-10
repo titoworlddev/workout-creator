@@ -8,9 +8,16 @@ import { handleShowModal } from '../../../../utils/functions/handleModalFunction
 import { workoutInfo } from '../../../../utils/variables';
 import { addDayToWorkoutInfo } from '../../../../utils/functions/addDayToWorkoutInfo';
 import ErrorModal from '../../../../components/ErrorModal/ErrorModal';
+import { useReactToPrint } from 'react-to-print';
+import { getExercises } from '../../../../services/getExercises';
 
 export default function CreatorMain() {
   const [state, setState] = useState({});
+
+  const componentRef = React.useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current
+  });
 
   useEffect(() => {
     modalClickOutCloser();
@@ -33,7 +40,19 @@ export default function CreatorMain() {
           Here, you can create your workout by adding days and adding exercises
           at this days.
         </h2>
+
         <div className="btn-container">
+          <button
+            className="app-btn-primary"
+            onClick={() => {
+              const docToPrint = document.querySelector('.workout-print');
+              docToPrint.style.display = 'flex';
+              handlePrint();
+              docToPrint.style.display = 'none';
+            }}>
+            🖨️ Print to PDF
+          </button>
+
           <button
             className="btn-creator app-btn-primary"
             onClick={() =>
@@ -60,7 +79,7 @@ export default function CreatorMain() {
         />
       </div>
 
-      <div className="workout-days">
+      {/* <div className="workout-days" ref={componentRef}>
         {workoutInfo.workoutDays
           ? workoutInfo.workoutDays.map((day, index) => (
               <WorkoutDay
@@ -69,6 +88,42 @@ export default function CreatorMain() {
                 weekDay={weekDays[index]}
                 setState={() => setState({ ...state })}
               />
+            ))
+          : null}
+      </div> */}
+      <div
+        className="workout-print"
+        style={{
+          marginTop: '2rem',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+        ref={componentRef}>
+        <h2>{workoutInfo.workoutName}</h2>
+        {workoutInfo.workoutDays
+          ? workoutInfo.workoutDays.map((day, index) => (
+              <div key={day.dayName + index}>
+                <h3>{day.dayName + ' - ' + weekDays[index]}</h3>
+                <br />
+                <div style={{ display: 'flex', gap: '1rem' }}>
+                  {day.dayExercises.map((exercise, index) => {
+                    const img = getExercises().find(
+                      exer => exer.id === exercise.exerciseId
+                    ).gifUrl;
+                    return (
+                      <img
+                        key={exercise.exerciseId + index}
+                        width={100}
+                        alt="img"
+                        src={img}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
             ))
           : null}
       </div>
