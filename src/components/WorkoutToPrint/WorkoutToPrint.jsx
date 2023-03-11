@@ -25,7 +25,7 @@ export default class WorkoutToPrint extends React.Component {
                 <h3>{`${weekDays[index]} - ${day.dayName}`}</h3>
                 <br />
 
-                <div className="workout-to-print-exercises">
+                <div className="workout-to-print-day-exercises">
                   {day.dayExercises.map((exercise, index) => {
                     const img = getExercises().find(
                       exer => exer.id === exercise.exerciseId
