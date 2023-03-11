@@ -6,11 +6,17 @@
   height: 100vh;
   display: none;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
+}
+.workout-to-print h2 {
+  text-align: center;
 }
 
 .workout-to-print-exercises {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 110px);
   gap: 1rem;
+}
+.workout-to-print-exercises img {
+  width: 100%;
 }

@@ -41,6 +41,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Quitar el color de aqui cuando termines el print to pdf */
   background-color: var(--secondary-color);
   color: var(--accent-color);
 }

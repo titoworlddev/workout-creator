@@ -2,6 +2,7 @@ main {
   align-items: center;
   min-height: 100vh;
   padding: 12vh 15%;
+  background-color: var(--secondary-color);
 }
 @media screen and (max-width: 1024px) {
   main {
