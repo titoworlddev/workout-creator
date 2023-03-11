@@ -1,8 +1,11 @@
 .workout-to-print {
-  margin-top: 2rem;
+  color: #000;
+  background-color: #fff;
+  padding: 1rem;
+  width: 792px;
+  height: 1120px;
   display: none;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
