@@ -1,0 +1,13 @@
+.workout-to-print {
+  margin-top: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.workout-to-print-exercises {
+  display: flex;
+  gap: 1rem;
+}
