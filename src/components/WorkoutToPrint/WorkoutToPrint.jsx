@@ -21,7 +21,7 @@ export default class WorkoutToPrint extends React.Component {
 
         {workoutInfo.workoutDays
           ? workoutInfo.workoutDays.map((day, index) => (
-              <div key={day.dayName + index}>
+              <div className="workout-to-print-day" key={day.dayName + index}>
                 <h3>{`${weekDays[index]} - ${day.dayName}`}</h3>
                 <br />
 

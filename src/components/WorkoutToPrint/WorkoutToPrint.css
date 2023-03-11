@@ -12,6 +12,11 @@
   text-align: center;
 }
 
+.workout-to-print-day {
+  /* break-before: always; */
+  break-after: left;
+}
+
 .workout-to-print-exercises {
   display: grid;
   grid-template-columns: repeat(auto-fill, 110px);
