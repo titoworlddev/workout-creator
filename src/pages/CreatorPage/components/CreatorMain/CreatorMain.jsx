@@ -16,7 +16,8 @@ export default function CreatorMain() {
 
   const componentRef = React.useRef();
   const handlePrint = useReactToPrint({
-    content: () => componentRef.current
+    content: () => componentRef.current,
+    documentTitle: workoutInfo.workoutName
   });
 
   useEffect(() => {
