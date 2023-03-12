@@ -38,12 +38,6 @@ export default function CreatorMain() {
 
   return (
     <main className="creator-main">
-      <div className="workout-name-input-container">
-        <label htmlFor="workout-name-input">
-          <h2>Workout name: </h2>
-        </label>
-        <input id="workout-name-input" type="text" placeholder="Workout" />
-      </div>
       <div className="alpha-version-message">
         <p>
           This is still the alpha version, it is not the final product, the
@@ -53,6 +47,13 @@ export default function CreatorMain() {
         </p>
       </div>
       <br />
+
+      <div className="workout-name-input-container">
+        <label htmlFor="workout-name-input">
+          <h2>Workout name: </h2>
+        </label>
+        <input id="workout-name-input" type="text" placeholder="Workout" />
+      </div>
 
       <div className="creator-title-btn-container">
         <h2 className="creator-title">
