@@ -27,16 +27,17 @@ export default class WorkoutToPrint extends React.Component {
 
                 <div className="workout-to-print-day-exercises">
                   {day.dayExercises.map((exercise, index) => {
-                    const img = getExercises().find(
+                    const exer = getExercises().find(
                       exer => exer.id === exercise.exerciseId
-                    ).gifUrl;
+                    );
 
                     return (
-                      <img
+                      <div
                         key={exercise.exerciseId + index}
-                        alt="img"
-                        src={img}
-                      />
+                        className="workout-to-print-day-exercise">
+                        <img alt="img" src={exer.gifUrl} />
+                        <h6>{exer.name.capitalize()}</h6>
+                      </div>
                     );
                   })}
                 </div>
