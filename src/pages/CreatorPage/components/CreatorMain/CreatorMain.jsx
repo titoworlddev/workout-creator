@@ -52,7 +52,12 @@ export default function CreatorMain() {
         <label htmlFor="workout-name-input">
           <h2>Workout name: </h2>
         </label>
-        <input id="workout-name-input" type="text" placeholder="Workout" />
+        <input
+          id="workout-name-input"
+          type="text"
+          placeholder="Workout"
+          defaultValue={workoutInfo.workoutName}
+        />
       </div>
 
       <div className="creator-title-btn-container">
