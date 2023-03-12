@@ -4,8 +4,10 @@
   display: none;
   flex-direction: column;
   gap: 1rem;
+  font-size: 9px;
 }
-.workout-to-print h2 {
+.workout-to-print h1 {
+  font-size: 13px;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -15,13 +17,21 @@
   break-inside: avoid;
 }
 
+.workout-to-print-day-title {
+  font-size: 11px;
+  margin-bottom: 0.25rem;
+}
+
 .workout-to-print-day-exercises {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 110px);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 110px));
   gap: 1rem;
 }
 .workout-to-print-day-exercises img {
   width: 100%;
+}
+.workout-to-print-day-exercises h3 {
+  font-size: 9px;
 }
 
 @page {

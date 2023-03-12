@@ -17,13 +17,12 @@ export default class WorkoutToPrint extends React.Component {
   render() {
     return (
       <div ref={this.useRef} className="workout-to-print">
-        <h2>{workoutInfo.workoutName}</h2>
+        <h1>{workoutInfo.workoutName}</h1>
 
         {workoutInfo.workoutDays
           ? workoutInfo.workoutDays.map((day, index) => (
               <div className="workout-to-print-day" key={day.dayName + index}>
-                <h3>{`${weekDays[index]} - ${day.dayName}`}</h3>
-                <br />
+                <h2 className="workout-to-print-day-title">{`${weekDays[index]} - ${day.dayName}`}</h2>
 
                 <div className="workout-to-print-day-exercises">
                   {day.dayExercises.map((exercise, index) => {
@@ -36,7 +35,10 @@ export default class WorkoutToPrint extends React.Component {
                         key={exercise.exerciseId + index}
                         className="workout-to-print-day-exercise">
                         <img alt="img" src={exer.gifUrl} />
-                        <h6>{exer.name.capitalize()}</h6>
+                        <h3>{exer.name.capitalize()}</h3>
+                        <p>Target: {exer.target.capitalize()}</p>
+                        <p>Sets: {exercise.sets}</p>
+                        <p>Reps: {exercise.reps}</p>
                       </div>
                     );
                   })}
