@@ -23,7 +23,7 @@ export default function CreatorMain() {
 
   useEffect(() => {
     modalClickOutCloser();
-    workoutNameController();
+    workoutNameController(() => setState({}));
   }, []);
 
   const weekDays = [
