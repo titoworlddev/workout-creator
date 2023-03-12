@@ -7,7 +7,6 @@ export function workoutNameController() {
   workoutNameInput.addEventListener('input', () => {
     const workoutName = workoutNameInput.value;
     workoutInfo.workoutName = workoutName;
-    console.log(workoutInfo.workoutName);
     saveAtLocalStorage();
   });
 }
