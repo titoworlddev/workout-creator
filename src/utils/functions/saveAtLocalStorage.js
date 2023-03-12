@@ -4,7 +4,7 @@ export const initalizeLocalStorage = () => {
   if (!localStorage.getItem('workoutInfo'))
     localStorage.setItem(
       'workoutInfo',
-      JSON.stringify({ workoutName: '', workoutDays: [] })
+      JSON.stringify({ workoutName: 'Workout', workoutDays: [] })
     );
 };
 

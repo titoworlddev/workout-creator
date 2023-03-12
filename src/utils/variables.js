@@ -4,7 +4,7 @@ export let temporals = {
 };
 
 export let workoutInfo = JSON.parse(localStorage.getItem('workoutInfo')) || {
-  workoutName: '',
+  workoutName: 'Workout',
   workoutDays: []
 };
 
