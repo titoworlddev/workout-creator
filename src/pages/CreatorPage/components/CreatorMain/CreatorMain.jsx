@@ -44,6 +44,15 @@ export default function CreatorMain() {
         </label>
         <input id="workout-name-input" type="text" placeholder="Workout" />
       </div>
+      <div className="alpha-version-message">
+        <p>
+          This is still the alpha version, it is not the final product, the
+          design will change and certain functionalities will also change, in
+          addition to others that will be added. If there is any operating
+          error, please excuse us, it will be fixed as soon as possible.
+        </p>
+      </div>
+      <br />
 
       <div className="creator-title-btn-container">
         <h2 className="creator-title">

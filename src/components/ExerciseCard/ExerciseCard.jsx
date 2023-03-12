@@ -1,15 +1,36 @@
 import React from 'react';
 import './ExerciseCard.css';
+import { removeExerciseFromWorkout } from '../../utils/functions/removeExerciseFromWorkout';
 
 export default function ExerciseCard({
   exercise,
+  index = 0,
   series = 0,
   reps = 0,
-  onClick = () => {}
+  onClick = () => {},
+  isInWorkout = false,
+  dayName = '',
+  setParentState = () => {}
 }) {
   return (
     <div className="exercise-card" onClick={onClick}>
+      {isInWorkout ? (
+        <div className="exercise-card-menu">
+          {/* TODO: Add a button to edit the exercise  */}
+
+          <button
+            className="exercise-card-menu-btn"
+            onClick={() => {
+              removeExerciseFromWorkout(dayName, index);
+              setParentState();
+            }}>
+            🗑️
+          </button>
+        </div>
+      ) : null}
+
       <img src={exercise.gifUrl} alt={`${exercise.name.capitalize()} gif`} />
+
       <div className="card-info">
         <small>Name: {exercise.name.capitalize()}</small>
         <hr />

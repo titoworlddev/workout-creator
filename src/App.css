@@ -44,3 +44,17 @@ main {
   padding: 1rem 2.5rem;
   text-transform: uppercase;
 }
+
+.alpha-version-message {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
