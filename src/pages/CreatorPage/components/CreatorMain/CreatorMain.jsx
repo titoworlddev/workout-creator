@@ -10,6 +10,7 @@ import { addDayToWorkoutInfo } from '../../../../utils/functions/addDayToWorkout
 import ErrorModal from '../../../../components/ErrorModal/ErrorModal';
 import { useReactToPrint } from 'react-to-print';
 import WorkoutToPrint from '../../../../components/WorkoutToPrint/WorkoutToPrint';
+import { workoutNameController } from '../../../../utils/functions/workoutNameController';
 
 export default function CreatorMain() {
   const [state, setState] = useState({});
@@ -22,6 +23,7 @@ export default function CreatorMain() {
 
   useEffect(() => {
     modalClickOutCloser();
+    workoutNameController();
   }, []);
 
   const weekDays = [
@@ -36,6 +38,13 @@ export default function CreatorMain() {
 
   return (
     <main className="creator-main">
+      <div className="workout-name-input-container">
+        <label htmlFor="workout-name-input">
+          <h2>Workout name: </h2>
+        </label>
+        <input id="workout-name-input" type="text" placeholder="Workout" />
+      </div>
+
       <div className="creator-title-btn-container">
         <h2 className="creator-title">
           Here, you can create your workout by adding days and adding exercises

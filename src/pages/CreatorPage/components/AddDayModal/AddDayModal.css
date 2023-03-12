@@ -28,13 +28,6 @@ dialog label {
   color: var(--accent-color);
 }
 
-dialog input,
-dialog select {
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  border: none;
-}
-
 dialog .modal-buttons-container {
   display: flex;
   justify-content: space-between;

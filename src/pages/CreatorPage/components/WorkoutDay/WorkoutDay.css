@@ -18,6 +18,11 @@
   align-items: center;
   gap: 1rem;
 }
+@media screen and (max-width: 545px) {
+  .creator-main .day-title-btn-container .btns-container {
+    width: 100%;
+  }
+}
 
 .creator-main .day-exercises {
   display: grid;
