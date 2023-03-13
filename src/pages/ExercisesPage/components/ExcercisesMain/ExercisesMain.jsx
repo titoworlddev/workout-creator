@@ -4,14 +4,17 @@ import './ExercisesMain.css';
 import { getExercises } from '../../../../services/getExercises';
 import FilterForm from '../../../../components/FilterForm/FilterForm';
 import ExercisesResults from '../../../../components/ExercisesResults/ExercisesResults';
+import { defaultExercise } from '../../../../utils/variables';
 
 export default function ExercisesMain() {
   const [bodyPart, setBodyPart] = useState('back');
   const [target, setTarget] = useState('');
   const [equipment, setEquipment] = useState('');
   const [exercises, setExercises] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     setExercises(
       getExercises({
         bodyPart: bodyPart,
@@ -19,6 +22,7 @@ export default function ExercisesMain() {
         equipment: equipment
       })
     );
+    setIsLoading(false);
 
     const exercisesNumber = document.querySelector('.exercises-number');
     if (exercises.length === 0)
@@ -45,7 +49,11 @@ export default function ExercisesMain() {
 
       <br />
 
-      <ExercisesResults exercises={exercises} />
+      {isLoading ? (
+        <ExercisesResults exercises={Array(20).fill(defaultExercise)} />
+      ) : (
+        <ExercisesResults exercises={exercises} />
+      )}
     </main>
   );
 }
